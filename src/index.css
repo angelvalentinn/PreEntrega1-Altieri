@@ -278,7 +278,7 @@ li {
     font-weight: bold;
 }
 
-/* --------- MEDIA QUERYS ---------  */
+/* --------- MEDIA QUERY HEADER ---------  */
 
 @media screen and (min-width: 625px) {
 
@@ -501,5 +501,21 @@ li {
     .li-bell,
     .li-cart {
         align-self:flex-start;
+    }
+}
+
+/* ---------------- ASIDE ---------------- */
+
+.aside-img {
+    width: 100%;
+    min-height: 120px;
+}
+
+/* --------- MEDIA QUERY ASIDE ---------  */
+
+@media screen and (min-width: 1000px) {
+    .aside-img {
+        width: auto;
+        height: auto;
     }
 }

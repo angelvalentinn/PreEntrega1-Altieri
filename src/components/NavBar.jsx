@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faUser, faBell, faCartShopping, faMagnifyingGlass,faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import CartWidget from './CartWidget';
-import logoDesktop from "../assets/logoDesktop.jpg";
-import logoMobile from "../assets/logoMobile.png"
-import sale from "../assets/sale.jpg";
+import logoDesktop from "../assets/header-imgs/logoDesktop.jpg";
+import logoMobile from "../assets/header-imgs/logoMobile.png"
+import sale from "../assets/header-imgs/sale.jpg";
 
 const Navbar = () => {
     return (
