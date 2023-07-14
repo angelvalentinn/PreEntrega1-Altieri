@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting={"holaaaa (greeting)"} />
+      <ItemListContainer greeting={"holaaa (rama_prueba)"} />
     </>
   )
 }
