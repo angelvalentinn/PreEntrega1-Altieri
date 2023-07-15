@@ -6,9 +6,11 @@ function App() {
 
   return (
     <>
+
       <NavBar />
       <Aside />
       <ItemListContainer />
+      
     </>
   )
 }
