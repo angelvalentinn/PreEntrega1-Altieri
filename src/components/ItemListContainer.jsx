@@ -1,8 +1,10 @@
+import Card from "./Card"
+
 const ItemListContainer = ({greeting}) => {
     return (
-        <div className='items-container'>
-            <h1>{greeting}</h1>
-        </div>
+        <main className='items-container'>
+            <Card />
+        </main>
     )
 }
 
