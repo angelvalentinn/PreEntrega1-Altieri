@@ -187,6 +187,25 @@ li {
 
 .li-categoria {
     position: relative;
+    
+}
+
+.li-categoria::after {
+    content: "";
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    right: -13px;
+    transform: rotate(45deg) translate(-50%,-50%);
+    color: rgba(0,0,0,.3);
+    margin: 0;
+    padding: 2px;
 }
 
 .submenu {
@@ -220,16 +239,25 @@ li {
 
 .submenu ul {
     color: #fff;
-    display: flex;
+    display: block;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 }
 
 .submenu ul li {
     font-weight: 600;
-    color: #fff;
+    color: var(--clr-g);
+    display: flex;
+    align-items: center;
+    padding: .7rem 6rem .7rem 2rem;
 }
 
+.submenu ul li:hover {
+    background-color: #3483fa;
+    width: 100%;
+    height: 100%;
+    padding-block: .7rem;
+}
 
 .nav-secondary {
     margin: 0;
@@ -401,9 +429,9 @@ li {
         font-size: 0.8rem;
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.5rem;
         padding-left: 0;
-        margin: 2px;
+        margin: 0; 
     }
     
     .nav-ul li{
@@ -415,15 +443,16 @@ li {
     
     .li-categoria {
         position: relative;
+        margin-right: .7rem;
     }
     
     .submenu {
         position: absolute;
-        right: -30px;
+        right: -37px;
         background-color: #333;
         border-radius: 5px;
         margin-top: 0.7rem;
-        padding: 2rem 6rem 2rem 2rem;
+        padding: 2rem 0rem 2rem 0rem;
         display: none;
         cursor: auto;
         z-index: 999;
@@ -449,7 +478,7 @@ li {
         position: absolute;
         top: 0; 
         left: 0;
-        right: -7px;
+        right: -17px;
         bottom: -1.5rem;
         z-index: -1;
     }
@@ -469,14 +498,24 @@ li {
     
     .submenu ul {
         color: #fff;
-        display: flex;
+        display: block;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
     }
     
     .submenu ul li {
         font-weight: 600;
         color: var(--clr-g);
+        display: flex;
+        align-items: center;
+        padding: .7rem 6rem .7rem 2rem;
+    }
+
+    .submenu ul li:hover {
+        background-color: #3483fa;
+        width: 100%;
+        height: 100%;
+        padding-block: .7rem;
     }
     
     .nav-secondary {
@@ -511,6 +550,7 @@ li {
 .aside {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .aside-img {
@@ -538,38 +578,42 @@ li {
     background-color: var(--clr-g);
 }
 
+.aside ul li.aside-li--active {
+    background-color: var(--clr-g);
+}
+
+.aside-arrowLeft {
+    cursor: pointer;
+    position: absolute;
+    height: 60px;
+    width: 40px;
+    background-color: #ffffff;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.aside-arrowRight{
+    cursor: pointer;
+    position: absolute;
+    height: 60px;
+    width: 40px;
+    background-color: #ffffff;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(180deg);
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
 /* --------- MEDIA QUERY ASIDE ---------  */
 
-@media screen and (min-width: 625px) {
-    
-    .aside {
-        position: relative;
-    }
-
-    .aside-arrowLeft {
-        cursor: pointer;
-        position: absolute;
-        height: 60px;
-        width: 40px;
-        background-color: #ffffff;
-        left: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-top-right-radius: 200px;
-        border-bottom-right-radius: 200px;
-    }
-
-    .aside-arrowRight{
-        cursor: pointer;
-        position: absolute;
-        height: 60px;
-        width: 40px;
-        background-color: #ffffff;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%) rotateZ(180deg);
-        border-top-right-radius: 200px;
-        border-bottom-right-radius: 200px;
+@media screen and (max-width: 625px) {
+    .aside-arrowLeft,
+    .aside-arrowRight {
+        display: none;
     }
 }
 
