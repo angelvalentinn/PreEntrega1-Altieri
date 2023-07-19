@@ -1,3 +1,4 @@
+import "./styles/app.scss";
 import ItemListContainer from "./components/ItemListContainer";
 import Aside from "./components/Aside";
 import NavBar from "./components/Navbar";
@@ -5,6 +6,7 @@ import NavBar from "./components/Navbar";
 function App() {
 
   return (
+    
     <>
 
       <NavBar />
@@ -12,7 +14,9 @@ function App() {
       <ItemListContainer />
       
     </>
+  
   )
+
 }
 
 export default App;
