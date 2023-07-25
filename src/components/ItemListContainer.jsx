@@ -1,6 +1,6 @@
 import Card from "./Card"
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     return (
         <main className='items-container'>
             <Card />

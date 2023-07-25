@@ -6,8 +6,9 @@ import logoMobile from "../assets/header-imgs/logoMobile.png"
 import sale from "../assets/header-imgs/sale.jpg";
 
 const Navbar = () => {
+    
     return (
-        <header className="header">
+    <header className="header">
         <div className="header-container">
             <picture>
                 <source media="(max-width: 624px)" srcSet={logoMobile} />
