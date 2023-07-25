@@ -4,7 +4,7 @@
             "id": 1,
             "name": "Absolut Original Vodka De Suecia Botella de 750 Ml",
             "sold": 1000,
-            "price": 6.750,
+            "price": 6750,
             "description": [
                 "Su porcentaje de graduación alcohólica es de 40 %.",
                 "Originario de Suecia",
@@ -24,7 +24,7 @@
             "id": 2,
             "name": "Licor Amarula 750 Ml",
             "sold": 5000,
-            "price": 11.581,
+            "price": 11581,
             "description": [
                 "Exquisito sabor afrutado y cremoso de la fruta marula",
                 "Graduación alcohólica de 17% para una experiencia sofisticada",
@@ -35,8 +35,8 @@
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/amarula-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/amarula-2.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/amarula/amarula-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/amarula/amarula-2.webp"
             ]
         },
         
@@ -44,15 +44,15 @@
             "id": 3,
             "name": "Aperitivo Aperol 750 Ml",
             "sold": 5000,
-            "price": 1.875,
+            "price": 1875,
             "description": [
                 "Bebida alcohólica de origen italiano de baja graduación alcohólica",
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/aperol-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/aperol-2.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/aperol-3.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/aperol/aperol-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/aperol/aperol-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/aperol/aperol-3.webp"
             ]
         },
         
@@ -60,7 +60,7 @@
             "id": 4,
             "name": "Bin Beefeater Blood Orange Gin Saborizado Coctel 750ml",
             "sold": 500,
-            "price": 7.385,
+            "price": 7385,
             "description": [
                 "Sabor Blood Orange para cocteles únicos y deliciosos",
                 "Estilo London Dry, calidad y sabor, ideal para compartir",
@@ -69,9 +69,9 @@
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/beefeater-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/beefeater-2.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/beefeater-3.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/beefeater/beefeater-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/beefeater/beefeater-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/beefeater/beefeater-3.webp"
             ]
         },
 
@@ -79,7 +79,7 @@
             "id": 5,
             "name": "Johnnie Walker Blue Label X750cc",
             "sold": 5000,
-            "price": 108.000,
+            "price": 108000,
             "description": [
                 "Origen: Escocia.",
                 "Presentación en estuche.",
@@ -87,10 +87,10 @@
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/blue-label-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/blue-label-2.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/blue-label-3.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/blue-label-4.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/blue-label/blue-label-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/blue-label/blue-label-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/blue-label/blue-label-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/blue-label/blue-label-4.webp"
             ]
         },
 
@@ -98,7 +98,7 @@
             "id": 6,
             "name": "Gin Bombay Sapphire London Dry 750 mL",
             "sold": 10000,
-            "price": 9.698,
+            "price": 9698,
             "description": [
                 "Estilo London Dry.",
                 "Realizado en Inglaterra.",
@@ -106,8 +106,8 @@
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/bombay-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/bombay-2.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/bombay/bombay-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/bombay/bombay-2.webp"
             ]
         },
 
@@ -121,9 +121,9 @@
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/campari-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/campari-2.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/campari-3.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/campari/campari-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/campari/campari-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/campari/campari-3.webp"
             ]
         },
 
@@ -131,7 +131,7 @@
             "id": 8,
             "name": "Chandon Extra Brut 3 Litros Ml Liniers Nordelta",
             "sold": 10000,
-            "price": 29.100,
+            "price": 29100,
             "description": [
                 "Añejamiento de 6 meses.",
                 "Se recomienda servir a 8 °C.",
@@ -139,8 +139,8 @@
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/chandon-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/chandon-2.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/chandon/chandon-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/chandon/chandon-2.webp"
             ]
         },
 
@@ -148,14 +148,14 @@
             "id": 9,
             "name": "Champagne Don Perignon Brut Vintage X750cc",
             "sold": 5000,
-            "price": 165.600,
+            "price": 165600,
             "description": [
                 "Grado de alcohol: 12.5%",
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/don-perignon-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/don-perignon-2.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/don-perignon/don-perignon-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/don-perignon/don-perignon-2.webp"
             ]
         },
 
@@ -163,14 +163,14 @@
             "id": 10,
             "name": "Absolut Elyx Vodka Suecia Botella De 1 Litro",
             "sold": 100,
-            "price": 24.871,
+            "price": 24871,
             "description": [
                 "Grado de alcohol: 40%",
                 "Beber con moderación. Prohibida su venta a menores de 18 años."
             ],
             "imgs": [
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/elyx-1.webp",
-                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/absolut/elyx-2.webp"
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/elyx/elyx-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/elyx/elyx-2.webp"
             ]
         }
 
