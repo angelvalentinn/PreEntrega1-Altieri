@@ -18,6 +18,12 @@
     width: 50px;
     object-fit: contain;
     grid-column: 1 / 2;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: .3s ease;
 }
 
 .entrada {
@@ -408,6 +414,11 @@
         font-weight: 400;
         font-size: 0.8rem;
     }
+
+    .nav-ul li:hover {
+        color: #333;
+        transition: .3s ease;
+    }
     
     .li-categoria {
         position: relative;
@@ -473,7 +484,7 @@
     
     .submenu ul li {
         font-weight: 600;
-        color: var(--clr-g);
+        color: #fff;
         display: flex;
         align-items: center;
         padding: .7rem 6rem .7rem 2rem;
@@ -481,7 +492,9 @@
 
     .submenu ul li:hover {
         background-color: #3483fa;
+        color: #fff;
         width: 100%;
+        transition: none;
         height: 100%;
         padding-block: .7rem;
     }

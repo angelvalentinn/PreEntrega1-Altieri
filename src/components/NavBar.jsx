@@ -4,6 +4,7 @@ import CartWidget from './CartWidget';
 import logoDesktop from "../assets/header-imgs/logoDesktop.jpg";
 import logoMobile from "../assets/header-imgs/logoMobile.png"
 import sale from "../assets/header-imgs/sale.jpg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     
@@ -38,10 +39,10 @@ const Navbar = () => {
                         Categorías
                         <div className="submenu">
                             <ul>
-                                <li>Vehículos</li>
                                 <li>Juegos</li>
                                 <li>Electrodomesticos</li>
                                 <li>Alcohol</li>
+                                <Link to='/'><li>Todos</li></Link>
                             </ul>
                         </div>
                     </li>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Card from "./Card"
 import { useState } from "react";
 import ItemList from "./ItemList";
+import Aside from "./Aside";
 
 const ItemListContainer = () => {
 
@@ -23,10 +24,14 @@ const ItemListContainer = () => {
     },[]);
 
     return (
-        <main className='items-container'>
-            <Card />
-            <ItemList productos={productos}/>
-        </main>
+        <>
+            <Aside />       
+            <main className='items-container'>
+                
+                <Card />
+                <ItemList productos={productos}/>
+            </main>
+        </>
     )
 }
 
