@@ -17,7 +17,7 @@ const ItemDetail = ({item}) => {
                         srcSet={img} 
                         alt={name} 
                         onMouseEnter={() => setSrcImg(img)}
-                        className='img--active'
+                        className={img === srcImg ? "img--active" : undefined}       
                         />)
                     }
                 </section>
@@ -31,8 +31,8 @@ const ItemDetail = ({item}) => {
                     </span>
                         
                     <div className="item-price">
-                        <p>$113.851</p>
-                        <span>en 12x {price}</span>
+                        <p>${price}</p>
+                        <span>en 12x de ${Math.round( ( (price*0.30) / 12) )}</span>
                     </div>
 
                     <div className="item-description">
