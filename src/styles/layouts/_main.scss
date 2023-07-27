@@ -79,7 +79,7 @@
             object-fit: contain;
 
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.01);
                 transition: .2s ease;
             }
         }
@@ -361,7 +361,7 @@
 
 /* ------------ MEDIA QUERY CARD --------------- */
 
-    @media screen and (max-width: 625px) {
+@media screen and (max-width: 625px) {
         
         .items-container {
             display: flex;
@@ -377,4 +377,4 @@
             }
         }
 
-    }
+}
