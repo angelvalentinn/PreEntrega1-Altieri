@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
 
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState(true);
     
     const handleMenu = () => {
         setMenu(!menu);
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <li>Mis compras</li>
                 <li>Favoritos</li>
                 <li className="li-bell"><FontAwesomeIcon icon={faBell} className='bell' /></li>
-                <li className="li-cart"><CartWidget /></li>
+                <Link to="/cart"><li className="li-cart"><CartWidget /></li></Link>
             </ul>
         </div>
     </header>

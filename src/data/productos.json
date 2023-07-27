@@ -2,6 +2,7 @@
         {   
             "id": 1,
             "category": "alcohol",
+            "stock": 10,
             "name": "Absolut Original Vodka De Suecia Botella de 750 Ml",
             "sold": 1000,
             "price": 6750,
@@ -23,6 +24,7 @@
         {
             "id": 2,
             "category": "alcohol",
+            "stock": 20,
             "name": "Licor Amarula 750 Ml",
             "sold": 5000,
             "price": 11581,
@@ -45,6 +47,7 @@
             "id": 3,
             "name": "Aperitivo Aperol 750 Ml",
             "category": "alcohol",
+            "stock": 60,
             "sold": 5000,
             "price": 1875,
             "description": [
@@ -61,6 +64,7 @@
         {
             "id": 4,
             "category": "alcohol",
+            "stock": 8,
             "name": "Bin Beefeater Blood Orange Gin Saborizado Coctel 750ml",
             "sold": 500,
             "price": 7385,
@@ -81,6 +85,7 @@
         {
             "id": 5,
             "category": "alcohol",
+            "stock": 5,
             "name": "Johnnie Walker Blue Label X750cc",
             "sold": 5000,
             "price": 108000,
@@ -101,6 +106,7 @@
         {
             "id": 6,
             "category": "alcohol",
+            "stock": 9,
             "name": "Gin Bombay Sapphire London Dry 750 mL",
             "sold": 10000,
             "price": 9698,
@@ -119,6 +125,7 @@
         {
             "id": 7,
             "category": "alcohol",
+            "stock": 12,
             "name": "Aperitivo Campari 750cc",
             "sold": 10000,
             "price": 1876,
@@ -136,6 +143,7 @@
         {
             "id": 8,
             "category": "alcohol",
+            "stock": 11,
             "name": "Chandon Extra Brut 3 Litros Ml Liniers Nordelta",
             "sold": 10000,
             "price": 29100,
@@ -154,6 +162,7 @@
         {
             "id": 9,
             "category": "alcohol",
+            "stock": 16,
             "name": "Champagne Don Perignon Brut Vintage X750cc",
             "sold": 5000,
             "price": 165600,
@@ -170,6 +179,7 @@
         {
             "id": 10,
             "category": "alcohol",
+            "stock": 15,
             "name": "Absolut Elyx Vodka Suecia Botella De 1 Litro",
             "sold": 100,
             "price": 24871,
@@ -180,6 +190,202 @@
             "imgs": [
                 "../../src/assets/imgs-products-ml/bebidas-alcoholicas/elyx/elyx-1.webp",
                 "../../src/assets/imgs-products-ml/bebidas-alcoholicas/elyx/elyx-2.webp"
+            ]
+        },
+
+        {
+            "id": 11,
+            "category": "alcohol",
+            "stock": 6,
+            "name": "Aperitivo Fernet Branca 750cc",
+            "sold": 10000,
+            "price": 2623,
+            "description": [
+                "Bebida alcohólica amarga de color oscuro y aroma intenso",
+                "Elaborada a partir de varios tipos de hierbas como mirra, ruibarbo, manzanilla, etc.",
+                "54% de graduación alcohólica",
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/fernet/fernet-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/fernet/fernet-2.webp"
+            ]
+        },
+
+        {
+            "id": 12,
+            "category": "alcohol",
+            "stock": 13,
+            "name": "The Glenlivet 12 Años Yo Whisky Escocés 700ml",
+            "sold": 100,
+            "price": 18766,
+            "description": [
+                "Origen: Escocia.",
+                "Incluye estuche.",
+                "40% de graduación alcohólica.",
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/glenlivet/glenlivet-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/glenlivet/glenlivet-2.webp"
+            ]
+        },
+
+        {
+            "id": 13,
+            "category": "alcohol",
+            "stock": 13,
+            "name": "Tequila Gran Patron De Burdeos Segunda Generación",
+            "sold": 20,
+            "price": 1308103,
+            "description": [
+
+                "40% de graduación alcohólica.",
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/gran-patron/gran-patron-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/gran-patron/gran-patron-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/gran-patron/gran-patron-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/gran-patron/gran-patron-4.webp"
+            ]
+        },
+
+        {
+            "id": 14,
+            "category": "alcohol",
+            "stock": 18,
+            "name": "Jack Daniel's Old No. 7 Estados Unidos 750 mL",
+            "sold": 10000,
+            "price": 13750,
+            "description": [
+                "Origen: Estados Unidos.",
+                "40% de graduación alcohólica.",
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jack-daniels/jack-daniels-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jack-daniels/jack-daniels-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jack-daniels/jack-daniels-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jack-daniels/jack-daniels-4.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jack-daniels/jack-daniels-5.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jack-daniels/jack-daniels-6.webp"
+            ]
+        },
+
+        {
+            "id": 15,
+            "category": "alcohol",
+            "stock": 18,
+            "name": "Jägermeister 700ml - Licor De Hierbas - Jagger Jager",
+            "sold": 10000,
+            "price": 9600,
+            "description": [
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jager/jager-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jager/jager-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jager/jager-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jager/jager-4.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jager/jager-5.webp"
+            ]
+        },
+
+        {
+            "id": 16,
+            "category": "alcohol",
+            "stock": 4,
+            "name": "Whiskey Jameson Irlandés 700ml",
+            "sold": 5000,
+            "price": 7590,
+            "description": [
+                "Año de destilación:2020.",
+                "Origen: Irlanda.",
+                "Elaborado a partir de agua, cebada y maíz, barriles de bourbon, barricas de jerez con madera quemada y vainilla.",
+                "40% de graduación alcohólica.",
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jameson/jameson-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jameson/jameson-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/jameson/jameson-3.webp"
+            ]
+        },
+
+        {
+            "id": 17,
+            "category": "alcohol",
+            "stock": 22,
+            "name": "Vodka Nuvo L'esprit De Paris Licor Espumante Francia - Sufin",
+            "sold": 100,
+            "price": 31000,
+            "description": [
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/nuvo/nuvo-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/nuvo/nuvo-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/nuvo/nuvo-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/nuvo/nuvo-4.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/nuvo/nuvo-5.webp"
+            ]
+        },
+
+        {
+            "id": 18,
+            "category": "alcohol",
+            "stock": 20,
+            "name": "Vodka Skyy 700 Ml",
+            "sold": 5,
+            "price": 17167,
+            "description": [
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/skyy/skyy-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/skyy/skyy-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/skyy/skyy-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/skyy/skyy-4.webp"
+            ]
+        },
+
+        {
+            "id": 19,
+            "category": "alcohol",
+            "stock": 17,
+            "name": "Vodka Smirnoff Black 700ml",
+            "sold": 30,
+            "price": 39991,
+            "description": [
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/smirnoff/smirnoff-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/smirnoff/smirnoff-2.webp"
+
+            ]
+        },
+
+        {
+            "id": 20,
+            "category": "alcohol",
+            "stock": 7,
+            "name": "Vodka Smirnoff Black 700ml",
+            "sold": 100,
+            "price": 18500,
+            "description": [
+                "Su porcentaje de graduación alcohólica es de 29 %.",
+                "Originario de Reino Unido de Gran Bretaña.",
+                "Beber con moderación. Prohibida su venta a menores de 18 años."
+            ],
+            "imgs": [
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/tofka/tofka-1.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/tofka/tofka-2.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/tofka/tofka-3.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/tofka/tofka-4.webp",
+                "../../src/assets/imgs-products-ml/bebidas-alcoholicas/tofka/tofka-5.webp"
+
             ]
         }
 

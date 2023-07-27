@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import whatsapp from '../assets/whatsapp.png';
 
 const ItemDetail = ({item}) => {
 
-    const { name, sold, price, description, imgs }  = item;
+    const { name, sold, price, description, imgs, stock }  = item;
     const [srcImg, setSrcImg] = useState(imgs[0]);
 
     return (
@@ -47,13 +48,17 @@ const ItemDetail = ({item}) => {
                 </section>
 
                 <section className="item-buy">
-                    <p className="text">Stock disponible</p>
+                    <p className="text">Stock disponible <span>({stock})</span></p>
                     <div className="cantidad">
                         <button>+</button>
                         <p>0</p>
                         <button>-</button>
                     </div>
-                    <button>Agregar al carrito</button>
+                    <div className="buttons">
+                        <button>Agregar al carrito</button>
+                        <button className="button-what"><img src={whatsapp} alt="" />WhatsApp</button>
+                    </div>
+                    
                 </section>
             </div>
         </section>
