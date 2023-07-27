@@ -1,10 +1,29 @@
+import { useEffect } from "react";
+import Card from "./Card"
+import { useState } from "react";
+import ItemList from "./ItemList";
+import Aside from "./Aside";
+import { pedirData } from "./helpers/pedirData";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([]);
+
+    useEffect( () => {
+        pedirData("../../src/data/productos.json")
+            .then(data => setProductos(data));
+    },[]);
+
     return (
-        <div className='items-container'>
-            <h1>{greeting}</h1>
-        </div>
+        <>
+            <Aside />       
+            <main className='items-container'>
+                
+                <Card />
+                <ItemList productos={productos}/>
+            </main>
+        </>
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

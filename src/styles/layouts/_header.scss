@@ -1,33 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --bg:#fff159;
-    --clr-b:#333;
-    --clr-g:#ededed;
-}
-
-body {
-    overflow-x: hidden;
-    min-height: 100vh;
-    color: var(--clr-b);
-    font-family: "Montserrat",sans-serif;
-}
-
-img {
-    object-fit: cover;
-}
-
-li {
-    list-style-type: none;
-}
-
-/* ------------- HEADER -------------- */
 
 .header {
     background-color: var(--bg);
@@ -48,6 +18,12 @@ li {
     width: 50px;
     object-fit: contain;
     grid-column: 1 / 2;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: .3s ease;
 }
 
 .entrada {
@@ -89,7 +65,7 @@ li {
 }
 
 .entrada input:focus {
-    border: 1.5px solid #3483fa;
+    border: 1.5px solid var(--clr-blue);
 }
 
 .lupa {
@@ -160,11 +136,16 @@ li {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
     display: none; /* Se muestra en desktop */
 }
 
 .show-nav {
     display: block;
+}
+
+.disabled-nav {
+    display: none;
 }
 
 .nav ul {
@@ -185,15 +166,34 @@ li {
 
 .li-categoria {
     position: relative;
+    
+}
+
+.li-categoria::after {
+    content: "";
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    right: -13px;
+    transform: rotate(45deg) translate(-50%,-50%);
+    color: rgba(0,0,0,.3);
+    margin: 0;
+    padding: 2px;
 }
 
 .submenu {
     position: absolute;
-    right: -30px;
+    right: 40px;
     background-color: #333;
     border-radius: 5px;
     margin-top: 0.3rem;
-    padding: 2rem 6rem 2rem 2rem;
+    padding: 1rem 0;
     display: none;
     cursor: auto;
 }
@@ -216,18 +216,37 @@ li {
     width: 20px;
 }
 
+.li-categoria:before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: -17px;
+    bottom: -1.5rem;
+    z-index: 1;
+}
+
 .submenu ul {
     color: #fff;
-    display: flex;
+    display: block;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 }
 
 .submenu ul li {
     font-weight: 600;
-    color: #fff;
+    color: var(--clr-g);
+    display: flex;
+    align-items: center;
+    padding: .7rem 6rem .7rem 2rem;
 }
 
+.submenu ul li:hover {
+    background-color: #3483fa;
+    width: 100%;
+    height: 100%;
+    padding-block: .7rem;
+}
 
 .nav-secondary {
     margin: 0;
@@ -278,7 +297,7 @@ li {
     font-weight: bold;
 }
 
-/* --------- MEDIA QUERYS ---------  */
+/* --------- MEDIA QUERY HEADER ---------  */
 
 @media screen and (min-width: 625px) {
 
@@ -335,7 +354,7 @@ li {
     }
     
     .entrada input:focus {
-        border: 1.5px solid #3483fa;
+        border: 1.5px solid var(--clr-blue);
     }
     
     .lupa {
@@ -399,9 +418,9 @@ li {
         font-size: 0.8rem;
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.5rem;
         padding-left: 0;
-        margin: 2px;
+        margin: 0; 
     }
     
     .nav-ul li{
@@ -410,18 +429,24 @@ li {
         font-weight: 400;
         font-size: 0.8rem;
     }
+
+    .nav-ul li:hover {
+        color: #333;
+        transition: .3s ease;
+    }
     
     .li-categoria {
         position: relative;
+        margin-right: .7rem;
     }
     
     .submenu {
         position: absolute;
-        right: -30px;
+        right: -37px;
         background-color: #333;
         border-radius: 5px;
         margin-top: 0.7rem;
-        padding: 2rem 6rem 2rem 2rem;
+        padding: 2rem 0rem 2rem 0rem;
         display: none;
         cursor: auto;
         z-index: 999;
@@ -447,7 +472,7 @@ li {
         position: absolute;
         top: 0; 
         left: 0;
-        right: -7px;
+        right: -17px;
         bottom: -1.5rem;
         z-index: -1;
     }
@@ -467,14 +492,26 @@ li {
     
     .submenu ul {
         color: #fff;
-        display: flex;
+        display: block;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
     }
     
     .submenu ul li {
         font-weight: 600;
-        color: var(--clr-g);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: .7rem 6rem .7rem 2rem;
+    }
+
+    .submenu ul li:hover {
+        background-color: #3483fa;
+        color: #fff;
+        width: 100%;
+        transition: none;
+        height: 100%;
+        padding-block: .7rem;
     }
     
     .nav-secondary {
