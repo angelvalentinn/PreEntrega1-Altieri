@@ -1,7 +1,7 @@
-{
-    "bebidas": [
+[
         {   
             "id": 1,
+            "category": "alcohol",
             "name": "Absolut Original Vodka De Suecia Botella de 750 Ml",
             "sold": 1000,
             "price": 6750,
@@ -22,6 +22,7 @@
         
         {
             "id": 2,
+            "category": "alcohol",
             "name": "Licor Amarula 750 Ml",
             "sold": 5000,
             "price": 11581,
@@ -43,6 +44,7 @@
         {
             "id": 3,
             "name": "Aperitivo Aperol 750 Ml",
+            "category": "alcohol",
             "sold": 5000,
             "price": 1875,
             "description": [
@@ -58,6 +60,7 @@
         
         {
             "id": 4,
+            "category": "alcohol",
             "name": "Bin Beefeater Blood Orange Gin Saborizado Coctel 750ml",
             "sold": 500,
             "price": 7385,
@@ -77,6 +80,7 @@
 
         {
             "id": 5,
+            "category": "alcohol",
             "name": "Johnnie Walker Blue Label X750cc",
             "sold": 5000,
             "price": 108000,
@@ -96,6 +100,7 @@
 
         {
             "id": 6,
+            "category": "alcohol",
             "name": "Gin Bombay Sapphire London Dry 750 mL",
             "sold": 10000,
             "price": 9698,
@@ -113,6 +118,7 @@
 
         {
             "id": 7,
+            "category": "alcohol",
             "name": "Aperitivo Campari 750cc",
             "sold": 10000,
             "price": 1876,
@@ -129,6 +135,7 @@
 
         {
             "id": 8,
+            "category": "alcohol",
             "name": "Chandon Extra Brut 3 Litros Ml Liniers Nordelta",
             "sold": 10000,
             "price": 29100,
@@ -146,6 +153,7 @@
 
         {
             "id": 9,
+            "category": "alcohol",
             "name": "Champagne Don Perignon Brut Vintage X750cc",
             "sold": 5000,
             "price": 165600,
@@ -161,6 +169,7 @@
 
         {
             "id": 10,
+            "category": "alcohol",
             "name": "Absolut Elyx Vodka Suecia Botella De 1 Litro",
             "sold": 100,
             "price": 24871,
@@ -174,5 +183,4 @@
             ]
         }
 
-    ]
-}
+]

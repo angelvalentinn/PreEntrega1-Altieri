@@ -11,11 +11,13 @@ const Navbar = () => {
     return (
     <header className="header">
         <div className="header-container">
-            <picture>
-                <source media="(max-width: 624px)" srcSet={logoMobile} />
-                <source media="(min-width: 625px)" srcSet={logoDesktop} />
-                <img srcSet={logoDesktop} alt="Logo" className="logo" />
-            </picture>
+            <Link to='/'>
+                <picture>
+                    <source media="(max-width: 624px)" srcSet={logoMobile} />
+                    <source media="(min-width: 625px)" srcSet={logoDesktop} />
+                    <img srcSet={logoDesktop} alt="Logo" className="logo" />
+                </picture>
+            </Link>
             
             <div className="entrada">
                 <input type="text" placeholder="Estoy buscando..." />

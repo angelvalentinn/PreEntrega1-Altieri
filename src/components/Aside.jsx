@@ -28,6 +28,14 @@ const Aside = () => {
     },[url]);
     
 
+    const handleLeft = () => {
+        if(url == aside1) setUrl(aside5)
+        else if(url == aside2) setUrl(aside1)
+        else if(url == aside3) setUrl(aside2)
+        else if(url == aside4) setUrl(aside3)
+        else if(url == aside5) setUrl(aside4)        
+    }
+
     const handleRight = () => {
         if(url == aside1) setUrl(aside2)
         else if(url == aside2) setUrl(aside3)
@@ -39,7 +47,7 @@ const Aside = () => {
     return (
         <aside className="aside">
             <img srcSet={url} alt="Imágen de ofertas" className="aside-img"/>
-            <span ><ArrowLeft clase={"aside-arrowLeft"} /></span>
+            <span onClick={handleLeft}><ArrowLeft clase={"aside-arrowLeft"} /></span>
             <span onClick={handleRight}><ArrowRight  clase={"aside-arrowRight"}/></span>
             <ul>
                 <li onClick={() => setUrl(aside1)} className={url === aside1 ? "aside-li--active" : undefined  }></li>

@@ -3,24 +3,15 @@ import Card from "./Card"
 import { useState } from "react";
 import ItemList from "./ItemList";
 import Aside from "./Aside";
+import { pedirData } from "./helpers/pedirData";
 
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState({});
+    const [productos, setProductos] = useState([]);
 
-    const pedirData = async url => {
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            setProductos(data);
-        } catch(e) {
-            console.log(e);
-        }
-        
-    }
-    
     useEffect( () => {
-        pedirData("../../src/data/productos.json");
+        pedirData("../../src/data/productos.json")
+            .then(data => setProductos(data));
     },[]);
 
     return (
