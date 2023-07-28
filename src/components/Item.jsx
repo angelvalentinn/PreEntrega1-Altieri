@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Item = ({ item }) => {
   return (
       <div className="producto">
-        <img src={item.imgs[0]} alt={item.name} />
+        <img src={item.imgs[0]} loading="lazy" alt={item.name} />
 
         <div className="producto-texts">
           <p className="price">${item.price}</p>

@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
 
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState(true);
     
     const handleMenu = () => {
         setMenu(!menu);
@@ -48,9 +48,9 @@ const Navbar = () => {
                         Categorías
                         <div className="submenu">
                             <ul>
-                                <li>Juegos</li>
+                                <Link to='/productos/juegos'><li>Juegos</li></Link>
                                 <li>Electrodomesticos</li>
-                                <li>Alcohol</li>
+                                <Link to='/productos/alcohol'><li>Alcohol</li></Link>
                                 <Link to='/' onClick={handleMenu}><li>Todos</li></Link>
                             </ul>
                         </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <li>Mis compras</li>
                 <li>Favoritos</li>
                 <li className="li-bell"><FontAwesomeIcon icon={faBell} className='bell' /></li>
-                <li className="li-cart"><CartWidget /></li>
+                <Link to="/cart"><li className="li-cart"><CartWidget /></li></Link>
             </ul>
         </div>
     </header>
