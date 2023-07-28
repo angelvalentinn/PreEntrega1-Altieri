@@ -48,9 +48,9 @@ const Navbar = () => {
                         Categorías
                         <div className="submenu">
                             <ul>
-                                <li>Juegos</li>
+                                <Link to='/productos/juegos'><li>Juegos</li></Link>
                                 <li>Electrodomesticos</li>
-                                <li>Alcohol</li>
+                                <Link to='/productos/alcohol'><li>Alcohol</li></Link>
                                 <Link to='/' onClick={handleMenu}><li>Todos</li></Link>
                             </ul>
                         </div>

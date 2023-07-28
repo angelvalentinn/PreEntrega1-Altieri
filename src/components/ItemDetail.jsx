@@ -61,7 +61,7 @@ const ItemDetail = ({item}) => {
                     
                 </section>
             </div>
-        </section>
+    </section>
   )
 }
 
