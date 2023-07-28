@@ -61,7 +61,11 @@
   gap: 1.5rem;
 
   .producto {
-    min-height: 400px;
+    padding-top: 1rem;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+
     width: 260px;
     background-color: #fff;
     border: 1px solid var(--clr-g);
@@ -71,8 +75,9 @@
 
     img {
       border-radius: 10px 10px 0 0;
-      height: 280px;
-      width: 100%;
+      height: 140px;
+      width: 140px;
+      align-self: center;
       object-fit: contain;
 
       &:hover {
@@ -282,6 +287,7 @@
     }
   }
 }
+
 @media screen and (min-width: 625px) {
   .wrapperDetail {
     padding: 3rem 2rem;
