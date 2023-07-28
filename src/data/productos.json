@@ -597,9 +597,9 @@
     {
         "id": 31,
         "category": "juegos",
-        "stock": 20,
+        "stock": 4,
         "name": "Injustice 2 Playstation Hits Ps4 Juego Físico Original Nuevo",
-        "sold": 4,
+        "sold": 20,
         "price": 14234,
         "description": [
             "Género: acción y aventura.",
@@ -617,9 +617,9 @@
     {
         "id": 32,
         "category": "juegos",
-        "stock": 1000,
+        "stock": 4,
         "name": "LEGO Jurassic World Jurassic World Standard Edition Warner Bros. PS4 Físico",
-        "sold": 4,
+        "sold": 50,
         "price": 16890,
         "description": [
             "Clasificación E10+.",
@@ -640,9 +640,9 @@
     {
         "id": 34,
         "category": "juegos",
-        "stock": 10000,
+        "stock": 19,
         "name": "Minecraft Standard Edition Sony PS4 Físico",
-        "sold": 19,
+        "sold": 1000,
         "price": 18999,
         "description": [
             "Clasificación E10+.",
@@ -657,17 +657,16 @@
             "../../src/assets/imgs-products-ml/juegos/minecraft/minecraft-1.webp",
             "../../src/assets/imgs-products-ml/juegos/minecraft/minecraft-2.webp",
             "../../src/assets/imgs-products-ml/juegos/minecraft/minecraft-3.webp",
-            "../../src/assets/imgs-products-ml/juegos/minecraft/minecraft-4.webp",
-            "../../src/assets/imgs-products-ml/juegos/minecraft/minecraft-5.webp"
+            "../../src/assets/imgs-products-ml/juegos/minecraft/minecraft-4.webp"
         ]
     },
     
     {
         "id": 35,
         "category": "juegos",
-        "stock": 1000,
+        "stock": 10,
         "name": "Mortal Kombat 11 Ultimate Ultimate Edition - Físico - PS4",
-        "sold": 10,
+        "sold": 1000,
         "price": 20999,
         "description": [
             "Edición Ultimate con todos los personajes y contenidos adicionales.",
@@ -691,9 +690,9 @@
     {
         "id": 36,
         "category": "juegos",
-        "stock": 1000,
+        "stock": 3,
         "name": "Need for Speed: Heat Standard Edition Electronic Arts PS4 Físico",
-        "sold": 15,
+        "sold": 150,
         "price": 20999,
         "description": [
             "Clasificación T.",

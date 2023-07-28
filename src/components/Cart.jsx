@@ -1,4 +1,4 @@
-import imgPrueba from "../assets/imgs-products-ml/bebidas-alcoholicas/blue-label/blue-label-2.webp";
+import imgPrueba from '../assets/imgs-products-ml/bebidas-alcoholicas/blue-label/blue-label-2.webp';
 
 const Cart = () => {
     return (
