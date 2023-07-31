@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import whatsapp from '../assets/whatsapp.png';
-import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ item }) => {
@@ -14,8 +13,6 @@ const ItemDetail = ({ item }) => {
     const handleSumar = () => cantidad < stock && setCantidad(cantidad + 1);
 
     const handleRestar = () => cantidad > 1 && setCantidad(cantidad - 1);
-
-    const { handleAgregar } = useContext(CartContext);
 
     return (
     <section className="wrapperDetail">
@@ -61,7 +58,7 @@ const ItemDetail = ({ item }) => {
                     <p className="text">Stock disponible <span>({stock})</span></p>
                     <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar} stock={stock}/>
                     <div className="buttons">
-                        <button onClick={ () => handleAgregar(item,cantidad) }>Agregar al carrito</button>
+                        <button>Agregar al carrito</button>
                         <button className="button-what"><img src={whatsapp} alt="Icono de Whatsapp" />WhatsApp</button>
                     </div>
                     

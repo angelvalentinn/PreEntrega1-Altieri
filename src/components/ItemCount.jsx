@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const ItemCount = ({cantidad,handleSumar,handleRestar,stock}) => {
   return (
