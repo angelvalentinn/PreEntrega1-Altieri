@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 const Item = ({ item }) => {
+
   return (
       <div className="producto">
         <img src={item.imgs[0]} loading="lazy" alt={item.name} />

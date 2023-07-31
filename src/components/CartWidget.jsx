@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-const CartWidget = () => {
+const CartWidget = ({clase,clase2}) => {
+    const { counter } = useContext(CartContext);
+    
     return ( 
-        <div className='cart-container'>
-            <FontAwesomeIcon icon={faCartShopping}  className='cart'/>
-            <span className='cart-numerito'>0</span>
+        <div className={clase}>
+            <FontAwesomeIcon icon={faCartShopping}  className={clase2}/>
+            <span className='cart-numerito'>{counter()}</span>
         </div>
     )
 }

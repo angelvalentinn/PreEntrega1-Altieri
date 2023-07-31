@@ -4,8 +4,8 @@ import aside2 from "../assets/aside-imgs/aside-2.webp";
 import aside3 from "../assets/aside-imgs/aside-3.webp";
 import aside4 from "../assets/aside-imgs/aside-4.webp";
 import aside5 from "../assets/aside-imgs/aside-5.webp";
-import ArrowLeft from "../components/helpers/ArrowLeft";
-import ArrowRight from "../components/helpers/ArrowRight";
+import ArrowLeft from "../helpers/ArrowLeft";
+import ArrowRight from "../helpers/ArrowRight";
 
 
 const Aside = () => {

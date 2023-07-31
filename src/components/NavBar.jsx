@@ -11,15 +11,13 @@ const Navbar = () => {
 
     const [menu, setMenu] = useState(true);
     
-    const handleMenu = () => {
-        setMenu(!menu);
-    }
+    const handleMenu = () => setMenu(!menu);
 
     return (
     <header className="header">
         <div className="header-container">
             <Link to='/'>
-                <picture>
+                <picture onClick={ () => setMenu(true) }>
                     <source media="(max-width: 624px)" srcSet={logoMobile} />
                     <source media="(min-width: 625px)" srcSet={logoDesktop} />
                     <img srcSet={logoDesktop} alt="Logo" className="logo" />
@@ -35,7 +33,7 @@ const Navbar = () => {
 
             <FontAwesomeIcon icon={faBars} className='bars' onClick={handleMenu}/>
 
-            <FontAwesomeIcon icon={faCartShopping}  className='cart-mobile'/>
+            <Link to='/cart' className='cart-mobile' onClick={ () => setMenu(true) }><CartWidget  clase={'cart-container'} clase2={'cart-mobile'}/></Link>
 
             <p className="msg-ubicacion">
                 <FontAwesomeIcon icon={faLocationDot}  className='location'/>
@@ -48,10 +46,10 @@ const Navbar = () => {
                         Categorías
                         <div className="submenu">
                             <ul>
-                                <Link to='/productos/juegos'><li>Juegos</li></Link>
-                                <li>Electrodomesticos</li>
-                                <Link to='/productos/alcohol'><li>Alcohol</li></Link>
-                                <Link to='/' onClick={handleMenu}><li>Todos</li></Link>
+                                <Link to='/productos/juegos' onClick={ () => setMenu(true) }><li>Juegos</li></Link>
+                                <li onClick={ () => setMenu(true) }>Electrodomesticos</li>
+                                <Link to='/productos/alcohol' onClick={ () => setMenu(true) }><li>Alcohol</li></Link>
+                                <Link to='/' onClick={ () => setMenu(true) }><li>Todos</li></Link>
                             </ul>
                         </div>
                     </li>
@@ -69,7 +67,7 @@ const Navbar = () => {
                 <li>Mis compras</li>
                 <li>Favoritos</li>
                 <li className="li-bell"><FontAwesomeIcon icon={faBell} className='bell' /></li>
-                <Link to="/cart"><li className="li-cart"><CartWidget /></li></Link>
+                <Link to="/cart" ><li className="li-cart"><CartWidget clase={'cart-container'} clase2={'cart'} /></li></Link>
             </ul>
         </div>
     </header>

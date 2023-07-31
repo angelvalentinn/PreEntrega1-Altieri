@@ -113,6 +113,10 @@
             background-color: #1a72f7;
             transition: 0.3s ease;
           }
+          &.button-disabled {
+              opacity: .3;
+              cursor: auto;
+          }
         }
         p {
           font-weight: 600;
