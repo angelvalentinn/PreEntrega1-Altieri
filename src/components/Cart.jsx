@@ -30,7 +30,7 @@ const Cart = () => {
                                             <button onClick={ () => eliminarItem(id) }>Eliminar</button>
                                             <div className="item-buttons">
                                                 <button className="button-increment">+</button>
-                                                <span>{ cantidad >= stock ? stock : cantidad }</span>
+                                                <span>{ cantidad }</span>
                                                 <button className="button-decrement">-</button>
                                             </div>
                                             <p className="item-price">${price * cantidad}</p>

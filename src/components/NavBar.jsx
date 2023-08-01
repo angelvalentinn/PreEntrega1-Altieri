@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faUser, faBell, faCartShopping, faMagnifyingGlass,faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faUser, faBell, faMagnifyingGlass,faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import CartWidget from './CartWidget';
 import logoDesktop from "../assets/header-imgs/logoDesktop.jpg";
 import logoMobile from "../assets/header-imgs/logoMobile.png"
@@ -47,7 +47,7 @@ const Navbar = () => {
                         <div className="submenu">
                             <ul>
                                 <Link to='/productos/juegos' onClick={ () => setMenu(true) }><li>Juegos</li></Link>
-                                <li onClick={ () => setMenu(true) }>Electrodomesticos</li>
+                                <Link to='/productos/electrodomesticos' onClick={ () => setMenu(true) }><li >Electrodomesticos</li></Link>
                                 <Link to='/productos/alcohol' onClick={ () => setMenu(true) }><li>Alcohol</li></Link>
                                 <Link to='/' onClick={ () => setMenu(true) }><li>Todos</li></Link>
                             </ul>

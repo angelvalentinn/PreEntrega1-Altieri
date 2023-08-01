@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import whatsapp from '../assets/whatsapp.png';
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
@@ -19,7 +19,7 @@ const ItemDetail = ({ item }) => {
 
     return (
     <section className="wrapperDetail">
-            <Link to='/' className="detail-back" ><span>Volver al Listado</span></Link>
+            <Link to={`/`} className="detail-back" ><span>Volver al Listado</span></Link>
             <div className="itemDetailContainer">
                 <section className="imgs">
                     {imgs.map(img => 
