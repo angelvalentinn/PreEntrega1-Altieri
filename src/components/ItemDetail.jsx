@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import whatsapp from '../assets/whatsapp.png';
+import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
+
+const celular = +541165075228;
 
 const ItemDetail = ({ item }) => {
 
@@ -16,6 +17,15 @@ const ItemDetail = ({ item }) => {
     const handleRestar = () => cantidad > 1 && setCantidad(cantidad - 1);
 
     const { handleAgregar } = useContext(CartContext);
+
+    const askToWhatsapp = (nameProduct,priceProduct) => {
+        /* el método encodeURIComponent recibe un string y verifica que los carácteres sean aptos para enviarse por url
+           en caso contrario los cambia por carácteres válidos en url, ejemplo: el espacio se cambia por %20*/
+        const link = `https://wa.me/${celular}?text=${encodeURIComponent("Hola, estoy interesado en ")}
+                      *${encodeURIComponent(nameProduct)}*,${encodeURIComponent(" que tiene un precio de ")}
+                      *${encodeURIComponent(priceProduct)}*.${encodeURIComponent(" ¡Muchas gracias!")}`;
+        window.open(link, "_blank");
+    }
 
     return (
     <section className="wrapperDetail">
@@ -62,7 +72,7 @@ const ItemDetail = ({ item }) => {
                     <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar} stock={stock}/>
                     <div className="buttons">
                         <button onClick={ () => handleAgregar(item,cantidad) }>Agregar al carrito</button>
-                        <button className="button-what"><img src={whatsapp} alt="Icono de Whatsapp" />WhatsApp</button>
+                        <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i class="bi bi-whatsapp"></i>WhatsApp</button>
                     </div>
                     
                 </section>
