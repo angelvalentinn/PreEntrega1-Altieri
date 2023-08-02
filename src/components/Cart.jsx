@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
 
-    const { cart, counter, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
+    const { cart, counter, totalCart, vaciarCart, eliminarItem, setCantidad } = useContext(CartContext);
+
+    const handleSumarCart = (cantidad,stock) => {
+        cantidad < stock && setCantidad(cantidad + 1);
+    }
+
+    const handleRestarCart = (cantidad) => {
+        cantidad > 1 && setCantidad(cantidad - 1);
+    }
 
     return (
         <>
@@ -18,7 +26,7 @@ const Cart = () => {
                             <h6>Tus productos</h6>
                             <p className="vaciar-carrito" onClick={vaciarCart}>Vaciar Carrito</p>
                             {cart.map(item => {
-                                const { name, cantidad, imgs, price, id, stock } = item;
+                                const { name, cantidad, imgs, price, id, stock} = item;
 
                                 return (
                                     <div key={id} className="carrito-item">
@@ -29,9 +37,9 @@ const Cart = () => {
                                             </p>
                                             <button onClick={ () => eliminarItem(id) }>Eliminar</button>
                                             <div className="item-buttons">
-                                                <button className="button-increment">+</button>
+                                                <button className="button-increment" onClick={() => handleSumarCart(cantidad,stock)}>+</button>
                                                 <span>{ cantidad }</span>
-                                                <button className="button-decrement">-</button>
+                                                <button className="button-decrement" onClick={() => handleRestarCart(cantidad)}>-</button>
                                             </div>
                                             <p className="item-price">${price * cantidad}</p>
                                         </div>

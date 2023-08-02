@@ -10,13 +10,8 @@ const ItemDetail = ({ item }) => {
     const { name, sold, price, description, imgs, stock }  = item;
     const [srcImg, setSrcImg] = useState(imgs[0]);
 
-    const [cantidad, setCantidad] = useState(1);
 
-    const handleSumar = () => cantidad < stock && setCantidad(cantidad + 1);
-
-    const handleRestar = () => cantidad > 1 && setCantidad(cantidad - 1);
-
-    const { handleAgregar } = useContext(CartContext);
+    const { handleAgregar, handleSumar, handleRestar, cantidad } = useContext(CartContext);
 
     const askToWhatsapp = (nameProduct,priceProduct) => {
         /* el método encodeURIComponent recibe un string y verifica que los carácteres sean aptos para enviarse por url
@@ -69,9 +64,9 @@ const ItemDetail = ({ item }) => {
 
                 <section className="item-buy">
                     <p className="text">Stock disponible <span>({stock})</span></p>
-                    <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar} stock={stock}/>
+                    <ItemCount cantidad={cantidad} handleRestar={() => handleRestar(cantidad)} handleSumar={() => handleSumar(cantidad,stock)} stock={stock}/>
                     <div className="buttons">
-                        <button onClick={ () => handleAgregar(item,cantidad) }>Agregar al carrito</button>
+                        <button onClick={ () => handleAgregar(item,cantidad) } >Agregar al carrito</button>
                         <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i className="bi bi-whatsapp"></i>WhatsApp</button>
                     </div>
                     

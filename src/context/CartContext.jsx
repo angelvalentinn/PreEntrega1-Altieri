@@ -9,30 +9,45 @@ const cartt = JSON.parse( localStorage.getItem("cart") ) || [];
 export const CartProvider = ( {children} ) => { 
 
     const [cart, setCart] = useState(cartt);
+    const [cantidad, setCantidad] = useState(1);
 
     const handleAgregar = (item,cantidad) =>  {
 
         const newCart = [...cart];
         const itemRepeat = newCart.find(itemCart => itemCart.id == item.id);
 
-        itemRepeat ? itemRepeat.cantidad += cantidad
-                   : newCart.push({...item, cantidad})
+        if(itemRepeat){
+            Toastify({
+                text: '¡ Este producto ya se encuentra en el carrito !',
+                duration: 1800,
+                close: true,
+                gravity: 'bottom',
+                position: 'center',
+                style: {
+                    background: `#fbb034`,
+                    fontSize: "0.8rem",
+                    color: '#fff',
+                    marginTop: '80vh'
+                }
+            }).showToast()
+        } else {
+            newCart.push({...item, cantidad}) 
+            Toastify({
+                text: '¡Listo! Producto agregado',
+                duration: 1800,
+                close: true,
+                gravity: 'bottom',
+                position: 'center',
+                style: {
+                    background: `#000`,
+                    fontSize: "0.8rem",
+                    color: '#fff',
+                    marginTop: '80vh'
+                }
+                }).showToast()
+        }             
         
         setCart( newCart )
-
-        Toastify({
-            text: '¡Listo! Producto agregado',
-            duration: 1800,
-            close: true,
-            gravity: 'bottom',
-            position: 'center',
-            style: {
-                background: `#000`,
-                fontSize: "0.8rem",
-                color: '#fff',
-                marginTop: '80vh'
-            }
-            }).showToast()
         
     }
 
@@ -41,6 +56,10 @@ export const CartProvider = ( {children} ) => {
     const vaciarCart = () => setCart([])
 
     const totalCart = () => cart.reduce( (acc,item) => ( item.cantidad * item.price ) + acc, 0 )
+
+    const handleSumar = (cantidad,stock) => cantidad < stock && setCantidad(cantidad + 1);
+
+    const handleRestar = (cantidad) => cantidad > 1 && setCantidad(cantidad - 1);
 
     const eliminarItem = id =>  {
         
@@ -64,7 +83,18 @@ export const CartProvider = ( {children} ) => {
     useEffect( () => localStorage.setItem("cart",JSON.stringify( cart )) , [cart] )
 
     return (
-        <CartContext.Provider value={ {cart,handleAgregar,counter,totalCart,vaciarCart,eliminarItem} }>
+        <CartContext.Provider value={ {
+            cart,
+            handleAgregar,
+            counter,
+            totalCart,
+            vaciarCart,
+            eliminarItem,
+            handleSumar,
+            handleRestar,
+            cantidad,
+            setCantidad
+            } }>
             {children}
         </CartContext.Provider>
     )
