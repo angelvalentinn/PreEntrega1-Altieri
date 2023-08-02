@@ -6,7 +6,7 @@ const CartWidget = ({clase,clase2}) => {
     
     return ( 
         <div className={clase}>
-            <i class={`bi bi-cart ${clase2}`}></i>
+            <i className={`bi bi-cart ${clase2}`}></i>
             <span className='cart-numerito'>{counter()}</span>
         </div>
     )

@@ -72,7 +72,7 @@ const ItemDetail = ({ item }) => {
                     <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar} stock={stock}/>
                     <div className="buttons">
                         <button onClick={ () => handleAgregar(item,cantidad) }>Agregar al carrito</button>
-                        <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i class="bi bi-whatsapp"></i>WhatsApp</button>
+                        <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i className="bi bi-whatsapp"></i>WhatsApp</button>
                     </div>
                     
                 </section>

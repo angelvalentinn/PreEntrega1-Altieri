@@ -24,17 +24,17 @@ const Navbar = () => {
             
             <div className="entrada">
                 <input type="text" placeholder="Estoy buscando..." />
-                <i class="bi bi-search lupa"></i>
+                <i className="bi bi-search lupa"></i>
             </div>
 
             <img srcSet={sale} alt="" className="msg-sale" />
 
-            <i class="bi bi-list bars" onClick={handleMenu}></i>
+            <i className="bi bi-list bars" onClick={handleMenu}></i>
 
             <Link to='/cart' className='cart-mobile' onClick={ () => setMenu(true) }><CartWidget  clase={'cart-container'} clase2={'cart-mobile'}/></Link>
 
             <p className="msg-ubicacion">
-                <i class="bi bi-geo-alt location"></i>
+                <i className="bi bi-geo-alt location"></i>
                 <span className="ubicacion-text">Enviar a<span>Buenos Aires 1825</span></span>
             </p>
 
@@ -61,10 +61,10 @@ const Navbar = () => {
             </nav>
     
             <ul className="nav-secondary">
-                <li><i class="bi bi-person user-icon"></i>User..</li>
+                <li><i className="bi bi-person user-icon"></i>User..</li>
                 <li>Mis compras</li>
                 <li>Favoritos</li>
-                <li className="li-bell"><i class="bi bi-bell bell"></i></li>
+                <li className="li-bell"><i className="bi bi-bell bell"></i></li>
                 <Link to="/cart" ><li className="li-cart"><CartWidget clase={'cart-container'} clase2={'cart'} /></li></Link>
             </ul>
         </div>
