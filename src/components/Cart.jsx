@@ -58,7 +58,7 @@ const Cart = () => {
                             <p className="carrito-compra-total">
                                 Total <span>${totalCart()}</span>
                             </p>
-                            <button className="carrito-compra-comprar">Comprar</button>
+                            <Link to='/checkout' className="carrito-compra-comprar">Comprar</Link>
                         </div>
                     </section>
                 }
