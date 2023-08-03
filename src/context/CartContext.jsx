@@ -15,7 +15,7 @@ export const CartProvider = ( {children} ) => {
 
         const newCart = [...cart];
         const itemRepeat = newCart.find(itemCart => itemCart.id == item.id);
-
+        
         if(itemRepeat){
             Toastify({
                 text: '¡ Este producto ya se encuentra en el carrito !',
@@ -48,7 +48,7 @@ export const CartProvider = ( {children} ) => {
         }             
         
         setCart( newCart )
-        
+        setCantidad(1)
     }
 
     const counter = () => cart.reduce( (acc,item) => item.cantidad + acc, 0 )

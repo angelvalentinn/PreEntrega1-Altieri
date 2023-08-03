@@ -10,7 +10,6 @@ const ItemDetail = ({ item }) => {
     const { name, sold, price, description, imgs, stock }  = item;
     const [srcImg, setSrcImg] = useState(imgs[0]);
 
-
     const { handleAgregar, handleSumar, handleRestar, cantidad } = useContext(CartContext);
 
     const askToWhatsapp = (nameProduct,priceProduct) => {
@@ -66,7 +65,7 @@ const ItemDetail = ({ item }) => {
                     <p className="text">Stock disponible <span>({stock})</span></p>
                     <ItemCount cantidad={cantidad} handleRestar={() => handleRestar(cantidad)} handleSumar={() => handleSumar(cantidad,stock)} stock={stock}/>
                     <div className="buttons">
-                        <button onClick={ () => handleAgregar(item,cantidad) } >Agregar al carrito</button>
+                        <button onClick={ () => handleAgregar(item,cantidad) }  >Agregar al carrito</button>
                         <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i className="bi bi-whatsapp"></i>WhatsApp</button>
                     </div>
                     
