@@ -707,5 +707,219 @@
             "../../src/assets/imgs-products-ml/juegos/need-speed/need-speed-3.webp",
             "../../src/assets/imgs-products-ml/juegos/need-speed/need-speed-4.webp"
         ]
+    },
+
+    {
+        "id": 37,
+        "category": "electrodomesticos",
+        "stock": 5,
+        "name": "Aire acondicionado BGH Silent Air split frío/calor 2300 frigorías blanco 220V BS26WCCR",
+        "sold": 5000,
+        "price": 239999,
+        "description": [
+            "Capacidad de refrigeración de 2700W",
+            "Capacidad de calefacción de 2650 W.",
+            "Frigorías: 2300.",
+            "Potencia de refrigeración de 830W y de calefacción de 735W.",
+            "Con función deshumidificación.",
+            "Dimensiones de la unidad interna: 722mm de ancho x 290mm de alto x 187mm de profundidad."
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/aire/aire-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aire/aire-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aire/aire-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aire/aire-4.webp"
+        ]
+    },
+
+    {
+        "id": 38,
+        "category": "electrodomesticos",
+        "stock": 8,
+        "name": "Aspiradora Hs-308a - Tedge",
+        "sold": 500,
+        "price": 22199,
+        "description": [
+            "Potencia: 700W",
+            "Modelo: HS-308A",
+            "Potencia de succión: 150W",
+            "Peso: 3.35Kg",
+            "Nivel de presión de sonido: menor o igual que 83dB"
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/aspiradora/aspiradora-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aspiradora/aspiradora-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aspiradora/aspiradora-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aspiradora/aspiradora-4.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aspiradora/aspiradora-5.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/aspiradora/aspiradora-6.webp"
+        ]
+    },
+
+    {
+        "id": 39,
+        "category": "electrodomesticos",
+        "stock": 5,
+        "name": "Escorial Candor Gas - 4 - Negro - Con visor - Gas natural",
+        "sold": 1000,
+        "price": 92429,
+        "description": [
+            "Cocina a gas natural con 4 hornallas eficientes.",
+            "Puerta del horno con visor para controlar fácilmente.",
+            "Conexión segura y confiable a gas natural.",
+            "Cocina de pie para fácil instalación en cualquier espacio.",
+            "Válvulas de seguridad en el horno para mayor protección."
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/cocina/cocina-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/cocina/cocina-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/cocina/cocina-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/cocina/cocina-4.webp"
+        ]
+    },
+
+    {
+        "id": 40,
+        "category": "electrodomesticos",
+        "stock": 13,
+        "name": "Máquina De Coser Recta Mini Blanca Y Violeta Accesorios Mini",
+        "sold": 5000,
+        "price": 9999,
+        "description": [
+            "Mecánica.",
+            "Tipos de puntada: recta.",
+            "Con ojal automático.",
+            "Accesorios incluidos: 4 bobinas, agujas, enebrador, manual, pedal de control.",
+            "Ideal para proyectos de corte y confección, desde los más básicos hasta los más creativos."
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/coser/coser-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/coser/coser-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/coser/coser-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/coser/coser-4.webp"
+        ]
+    },
+
+    {
+        "id": 41,
+        "category": "electrodomesticos",
+        "stock": 7,
+        "name": "Freidora Sin Aceite Philips Airfryer L Hd9252/90 1400w 4 L",
+        "sold": 100,
+        "price": 94919,
+        "description": [
+            "El compromiso de Philips es crear productos innovadores y tecnológicos que marquen una diferencia real en quienes la usan.",
+            "La freidora de aire Philips HD9252/90 te permite cocinar sin la necesidad de usar aceite." 
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/freidora/freidora-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/freidora/freidora-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/freidora/freidora-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/freidora/freidora-4.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/freidora/freidora-5.webp"
+        ]
+    },
+
+    {
+        "id": 42,
+        "category": "electrodomesticos",
+        "stock": 11,
+        "name": "Multiprocesadora Con Vaso Licuador Atma Lp8425p",
+        "sold": 100,
+        "price": 28995,
+        "description": [
+            "Potencia: 650W",
+            "Voltaje: 220V",
+            "Capacidad de la multiprocesadora: 1,2 litros",
+            "Capacidad del vaso licuador: 1,8 litros" ,
+            "Funciones: amasar, rallar, procesar, emulsionar y rebanar"
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/multiprocesadora/multiprocesadora-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/multiprocesadora/multiprocesadora-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/multiprocesadora/multiprocesadora-3.webp"
+        ]
+    },
+
+    {
+        "id": 43,
+        "category": "electrodomesticos",
+        "stock": 2,
+        "name": "Pava Jarra Electrica Metalica 2 Litros Acero Inoxidable",
+        "sold": 500,
+        "price": 5429,
+        "description": [
+            "Capacidad de 2 litros: ideal para preparar bebidas calientes para toda la familia",
+            "Materiales resistentes: combinación de plástico y acero inoxidable para mayor durabilidad",
+            "Diseño elegante y moderno: se adapta perfectamente a cualquier estilo de cocina",
+            "Marca OSR: garantía de calidad y confiabilidad en electrodomésticos" ,
+            "Fácil de usar: disfruta de té, café o mate en minutos sin complicacione"
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/pava/pava-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/pava/pava-2.webp"
+        ]
+    },
+
+    {
+        "id": 44,
+        "category": "electrodomesticos",
+        "stock": 3,
+        "name": "Pochoclera Electrica Winco W321 Ep Color Rojo",
+        "sold": 5000,
+        "price": 14599,
+        "description": [
+            "Diseño vintage.",
+            "Mide 35cm de alto.",
+            "Ideal para preparar deliciosos pochoclos en pocos minutos."
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/pochoclera/pochoclera-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/pochoclera/pochoclera-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/pochoclera/pochoclera-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/pochoclera/pochoclera-4.webp"
+        ]
+    },
+
+    {
+        "id": 45,
+        "category": "electrodomesticos",
+        "stock": 7,
+        "name": "Sandwichera Tostadora Electrica Paninis Doble Winco W-018",
+        "sold": 5000,
+        "price": 7849,
+        "description": [
+            "Superficie antiadherente.",
+            "750W.",
+            "Medidas 24x10x24,3cm",
+            "Indicadores luminosos."
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/sandwichera/sandwichera-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/sandwichera/sandwichera-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/sandwichera/sandwichera-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/sandwichera/sandwichera-4.webp"
+        ]
+    },
+
+    {
+        "id": 46,
+        "category": "electrodomesticos",
+        "stock": 20,
+        "name": "Tostadora Black+decker Tr200 Blanca 220v",
+        "sold": 10000,
+        "price": 7120,
+        "description": [
+            "Potencia de 750W.",
+            "Renová tus comidas y lucite en el hogar.",
+            "Con capacidad para 2 rebanadas.",
+            "Cuenta con 6 niveles de tostado."
+        ],
+        "imgs": [
+            "../../src/assets/imgs-products-ml/electrodomesticos/tostadora/tostadora-1.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/tostadora/tostadora-2.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/tostadora/tostadora-3.webp",
+            "../../src/assets/imgs-products-ml/electrodomesticos/tostadora/tostadora-4.webp"
+        ]
     }
 ]

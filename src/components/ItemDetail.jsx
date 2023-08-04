@@ -1,22 +1,29 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import whatsapp from '../assets/whatsapp.png';
+import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
+
+const celular = +541165075228;
 
 const ItemDetail = ({ item }) => {
 
     const { name, sold, price, description, imgs, stock }  = item;
     const [srcImg, setSrcImg] = useState(imgs[0]);
 
-    const [cantidad, setCantidad] = useState(1);
+    const { handleAgregar, handleSumar, handleRestar, cantidad } = useContext(CartContext);
 
-    const handleSumar = () => cantidad < stock && setCantidad(cantidad + 1);
-
-    const handleRestar = () => cantidad > 1 && setCantidad(cantidad - 1);
+    const askToWhatsapp = (nameProduct,priceProduct) => {
+        /* el método encodeURIComponent recibe un string y verifica que los carácteres sean aptos para enviarse por url
+           en caso contrario los cambia por carácteres válidos en url, ejemplo: el espacio se cambia por %20*/
+        const link = `https://wa.me/${celular}?text=${encodeURIComponent("Hola, estoy interesado en ")}
+                      *${encodeURIComponent(nameProduct)}*,${encodeURIComponent(" que tiene un precio de ")}
+                      *${encodeURIComponent(priceProduct)}*.${encodeURIComponent(" ¡Muchas gracias!")}`;
+        window.open(link, "_blank");
+    }
 
     return (
     <section className="wrapperDetail">
-            <Link to='/' className="detail-back" ><span>Volver al Listado</span></Link>
+            <Link to={`/`} className="detail-back" ><span>Volver al Listado</span></Link>
             <div className="itemDetailContainer">
                 <section className="imgs">
                     {imgs.map(img => 
@@ -56,10 +63,10 @@ const ItemDetail = ({ item }) => {
 
                 <section className="item-buy">
                     <p className="text">Stock disponible <span>({stock})</span></p>
-                    <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar} stock={stock}/>
+                    <ItemCount cantidad={cantidad} handleRestar={() => handleRestar(cantidad)} handleSumar={() => handleSumar(cantidad,stock)} stock={stock}/>
                     <div className="buttons">
-                        <button>Agregar al carrito</button>
-                        <button className="button-what"><img src={whatsapp} alt="Icono de Whatsapp" />WhatsApp</button>
+                        <button onClick={ () => handleAgregar(item,cantidad) }  >Agregar al carrito</button>
+                        <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i className="bi bi-whatsapp"></i>WhatsApp</button>
                     </div>
                     
                 </section>

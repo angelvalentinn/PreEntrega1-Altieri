@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faUser, faBell, faCartShopping, faMagnifyingGlass,faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import CartWidget from './CartWidget';
 import logoDesktop from "../assets/header-imgs/logoDesktop.jpg";
 import logoMobile from "../assets/header-imgs/logoMobile.png"
@@ -26,17 +24,17 @@ const Navbar = () => {
             
             <div className="entrada">
                 <input type="text" placeholder="Estoy buscando..." />
-                <FontAwesomeIcon icon={faMagnifyingGlass}  className='lupa'/>
+                <i className="bi bi-search lupa"></i>
             </div>
 
             <img srcSet={sale} alt="" className="msg-sale" />
 
-            <FontAwesomeIcon icon={faBars} className='bars' onClick={handleMenu}/>
+            <i className="bi bi-list bars" onClick={handleMenu}></i>
 
             <Link to='/cart' className='cart-mobile' onClick={ () => setMenu(true) }><CartWidget  clase={'cart-container'} clase2={'cart-mobile'}/></Link>
 
             <p className="msg-ubicacion">
-                <FontAwesomeIcon icon={faLocationDot}  className='location'/>
+                <i className="bi bi-geo-alt location"></i>
                 <span className="ubicacion-text">Enviar a<span>Buenos Aires 1825</span></span>
             </p>
 
@@ -47,7 +45,7 @@ const Navbar = () => {
                         <div className="submenu">
                             <ul>
                                 <Link to='/productos/juegos' onClick={ () => setMenu(true) }><li>Juegos</li></Link>
-                                <li onClick={ () => setMenu(true) }>Electrodomesticos</li>
+                                <Link to='/productos/electrodomesticos' onClick={ () => setMenu(true) }><li >Electrodomesticos</li></Link>
                                 <Link to='/productos/alcohol' onClick={ () => setMenu(true) }><li>Alcohol</li></Link>
                                 <Link to='/' onClick={ () => setMenu(true) }><li>Todos</li></Link>
                             </ul>
@@ -63,10 +61,10 @@ const Navbar = () => {
             </nav>
     
             <ul className="nav-secondary">
-                <li><FontAwesomeIcon icon={faUser} className='user-icon' />User..</li>
+                <li><i className="bi bi-person user-icon"></i>User..</li>
                 <li>Mis compras</li>
                 <li>Favoritos</li>
-                <li className="li-bell"><FontAwesomeIcon icon={faBell} className='bell' /></li>
+                <li className="li-bell"><i className="bi bi-bell bell"></i></li>
                 <Link to="/cart" ><li className="li-cart"><CartWidget clase={'cart-container'} clase2={'cart'} /></li></Link>
             </ul>
         </div>
