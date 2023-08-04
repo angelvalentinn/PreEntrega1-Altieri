@@ -1,15 +1,17 @@
 import Card from './Card'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import ItemList from './ItemList';
 import Aside from './Aside';
 import { pedirData } from '../helpers/pedirData';
 import { useParams } from 'react-router-dom';
 import { shuffleArray } from '../helpers/shuffleData';
+import { CartContext } from '../context/CartContext';
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
     const { categoria } = useParams();
+    const { setCantidad } = useContext(CartContext);
 
     useEffect( () => {
         pedirData("../../src/data/productos.json")
@@ -18,6 +20,10 @@ const ItemListContainer = () => {
                           : setProductos( shuffleArray(data) )
             })
     },[categoria]);
+
+    useEffect( () => {
+        return () => setCantidad(1)
+    },[])
 
     return (
         <>
