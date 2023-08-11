@@ -19,7 +19,7 @@ const ItemListContainer = () => {
                 categoria ? setProductos( data.filter(producto => producto.category.toLocaleLowerCase() === categoria.toLocaleLowerCase()) )
                           : setProductos( shuffleArray(data) )
             })
-    },[categoria]);
+    },[categoria]);  
 
     useEffect( () => {
         return () => setCantidad(1)

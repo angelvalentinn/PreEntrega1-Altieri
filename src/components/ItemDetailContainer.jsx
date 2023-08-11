@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
     const [productos, setProductos] = useState(null);
     const  { id }  = useParams();
     const [item, setItem] = useState(null);
-
+ 
     useEffect(() => {
         pedirData("../../src/data/productos.json")
             .then(data => setProductos(data))        
