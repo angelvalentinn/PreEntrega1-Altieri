@@ -13,24 +13,24 @@ const ItemListContainer = () => {
     const { categoria } = useParams();
     const { setCantidad } = useContext(CartContext);
 
-    useEffect( () => {
+    useEffect(() => {
         pedirData("../../src/data/productos.json")
             .then(data => {
-                categoria ? setProductos( data.filter(producto => producto.category.toLocaleLowerCase() === categoria.toLocaleLowerCase()) )
-                          : setProductos( shuffleArray(data) )
+                categoria ? setProductos(data.filter(producto => producto.category.toLocaleLowerCase() === categoria.toLocaleLowerCase()))
+                    : setProductos(shuffleArray(data))
             })
-    },[categoria]);  
+    }, [categoria]);
 
-    useEffect( () => {
+    useEffect(() => {
         return () => setCantidad(1)
-    },[])
+    }, [])
 
     return (
         <>
-            <Aside />       
+            <Aside />
             <main className='items-container'>
                 <Card />
-                <ItemList productos={productos}/>
+                <ItemList productos={productos} />
             </main>
         </>
     )
