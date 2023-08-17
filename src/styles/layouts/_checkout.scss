@@ -29,9 +29,27 @@
             }
         }
 
-        span {
+        .division {
             color: var(--clr-gl);
-            padding-block: 5px;
+            padding-block: 15px;
+            display: flex;
+            align-items: center;
+
+            .border-o-left {
+                width: 5rem;
+                height: 0.2px;
+                background-color: var(--clr-gl);
+            }
+
+            span {
+                padding-inline: 10px;
+            }
+
+            .border-o-right {
+                width: 5rem;
+                height: 0.2px;
+                background-color: var(--clr-gl);
+            }
         }
     }
 }
@@ -90,53 +108,102 @@
             }
         }
 
-        button {
-            border: none;
-            background-color: var(--clr-blue);
-            padding: 0.8rem 1rem;
-            color: #fff;
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            button {
+                border: none;
+                width: max-content;
+                background-color: var(--clr-blue);
+                padding: 0.8rem 1rem;
+                color: #fff;
+            }
+
+            p {
+                font-size: 0.8rem;
+
+                span {
+                    cursor: pointer;
+                    color: var(--clr-blue);
+
+                    &:hover {
+                        border-bottom: 1px solid var(--clr-blue);
+                    }
+                }
+            }
+        }
+
+        .botones {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                border: none;
+                width: 200px;
+                cursor: pointer;
+                background-color: var(--clr-blue);
+                padding: 0.8rem 0;
+                border-radius: 5px;
+                color: #fff;
+                &:hover {
+                    background-color: var(--clr-blue-dark);
+                    transition: .4s;
+                }
+            }
+            .logout {
+                width: 150px;
+                padding: 0.6rem;
+                i {
+                    padding-right: 10px;
+                }
+                background-color: var(--clr-red);
+                &:hover {
+                    background-color: var(--clr-red-dark);
+                }
+            }
         }
     }
 }
 
 @media screen and (min-width: 625px) {
-
     .checkout-choise-login {
         padding: 2rem;
-        min-height: 100vh;
         background: var(--clr-g);
-    
+
         h2 {
-            font-size: 1.9rem;
+            font-size: 1.5rem;
         }
-    
+
         .checkout-buttons {
             padding-top: 2rem;
-    
+
             button {
-                width: max-content;
-                background-color: var(--clr-blue);
-                border-radius: 3px;
-                color: #fff;
-                padding: 1.5rem 2rem;
-                border: none;
-                font-size: 1.2rem;
+                width: 300px;
+                padding: 0.7rem 0;
                 cursor: pointer;
+
                 &:hover {
                     background-color: #2f7aeb;
-                    transition: .4s ease;
+                    transition: 0.4s ease;
                 }
             }
-    
+
             .iniciar-google {
                 i {
                     padding-right: 12px;
                 }
             }
-    
-            span {
-                color: var(--clr-gl);
-                padding-block: 5px;
+
+            .division {
+                .border-o-left {
+                    width: 120px;
+                }
+
+                .border-o-right {
+                    width: 120px;
+                }
             }
         }
     }
@@ -195,14 +262,35 @@
                 }
             }
 
-            button {
-                align-self: flex-start;
-                border: none;
-                background-color: var(--clr-blue);
-                padding: 0.8rem 3rem;
-                font-size: 1rem;
-                color: #fff;
-                cursor: pointer;
+            .botones {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+
+                button {
+                    border: none;
+                    width: max-content;
+                    background-color: var(--clr-blue);
+                    width: 200px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    color: #fff;
+                }
+
+                p {
+                    align-self: flex-end;
+                    font-size: 0.7rem;
+                    color: #807e7e;
+
+                    span {
+                        color: var(--clr-blue);
+
+                        &:hover {
+                            border-bottom: 1px solid var(--clr-blue);
+                        }
+                    }
+                }
             }
         }
     }

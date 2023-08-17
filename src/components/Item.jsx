@@ -8,7 +8,7 @@ const Item = ({ item }) => {
         <img src={item.imgs[0]} loading="lazy" alt={item.name} />
 
         <div className="producto-texts">
-          <p className="price">${item.price}</p>
+          <p className="price">{Number(item.price).toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</p>
           <span>{item.name}</span>
         </div>
       </div>

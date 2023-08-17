@@ -1,26 +1,28 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { pedirData, pedirDataPorId } from "../helpers/pedirData";
 import ItemDetail from "./ItemDetail";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/firebase.config";
 
 const ItemDetailContainer = () => {
-    
-    const [productos, setProductos] = useState(null);
-    const  { id }  = useParams();
+
+    const { id } = useParams();
     const [item, setItem] = useState(null);
- 
-    useEffect(() => {
-        pedirData("../../src/data/productos.json")
-            .then(data => setProductos(data))        
-    },[]);
 
     useEffect(() => {
-        productos && setItem( pedirDataPorId(productos, id) )
-    }, [productos]);
-    
+        const docRef = doc(db,"productos",id)
+        pedirItem(docRef)
+    }, []);
+
+    const pedirItem = async docRef => {
+        let snapshot = await getDoc(docRef);
+        setItem({...snapshot.data(), id:snapshot.id})
+    }
+
+
     return (
         <>
-           { item && <ItemDetail item={item}/> }
+            {item && <ItemDetail item={item} />}
         </>
     )
 }
