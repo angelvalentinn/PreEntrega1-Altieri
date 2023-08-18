@@ -261,6 +261,9 @@
     display: flex;
     column-gap: 2rem;
     display: none; /* Se muestra en desktop */
+    .li-user {
+        display: none;
+    }
 }
 
 .nav-secondary li {
@@ -533,6 +536,11 @@
         grid-row: 2;
         grid-column: 4 / 5;
         column-gap: 2rem;
+        .li-user {
+            display: flex;
+            align-items: center;
+        }
+        
     }
     
     .nav-secondary li {

@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 const Navbar = () => {
 
-  
-
     const [menu, setMenu] = useState(true);
 
     const handleMenu = () => setMenu(!menu);
@@ -58,8 +56,8 @@ const Navbar = () => {
                 </nav>
 
                 <ul className="nav-secondary">
-                    <li><i className="bi bi-person user-icon"></i>User..</li>
-                    <li>Mis compras</li>
+                    <li className='li-user'><i className="bi bi-person user-icon"></i>User...</li>
+                    <li>Compras</li>
                     <li>Favoritos</li>
                     <li className="li-bell"><i className="bi bi-bell bell"></i></li>
                     <Link to="/cart" ><li className="li-cart"><CartWidget clase={'cart-container'} clase2={'cart'} /></li></Link>

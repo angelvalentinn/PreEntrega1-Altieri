@@ -1,15 +1,11 @@
 import { useState } from "react";
 import CheckoutModal from "./CheckoutModal";
+import { auth } from "../firebase/firebase.config";
+import { onAuthStateChanged } from "firebase/auth";
+import Login from "./Login";
 import Toastify from 'toastify-js'  
 import "toastify-js/src/toastify.css"
-import { Link } from "react-router-dom";
-import { auth } from "../firebase/firebase.config";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth";
-const provider = new GoogleAuthProvider();
-import { signInWithPopup } from "firebase/auth";
-import SelectLogin from "./SelectLogin";
-
+import { signOut } from "firebase/auth";
 
 const Checkout = () => {
 
@@ -38,12 +34,11 @@ const Checkout = () => {
         setDataForm({ ...newDataForm, [e.target.name]: e.target.value });
     };
 
-
     const cerrarSesion = () => {
         setUsuario(null)
         signOut(auth).then(() => {
             Toastify({
-                text: `¡ Deslogueo con éxito !`,
+                text: `¡ Sesión cerrada con éxito !`,
                 duration: 4000,
                 close: false,
                 gravity: 'top',
@@ -54,9 +49,7 @@ const Checkout = () => {
                     color: '#fff'
                 }
             }).showToast()
-            return (
-                <Checkout />
-            )
+
         }).catch(() => {
             alert("sucedio un error al desloguearse")
         });
@@ -67,7 +60,7 @@ const Checkout = () => {
             {usuario ? (
                 <CheckoutModal handleDataForm={handleDataForm} handleSubmit={handleSubmit} dataForm={dataForm} signOut={signOut} cerrarSesion={cerrarSesion} />
             ) : (
-                <SelectLogin />
+                <Login />
             )}
         </>
     );
