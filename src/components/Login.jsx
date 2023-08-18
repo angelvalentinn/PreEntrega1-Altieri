@@ -1,17 +1,30 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import Toastify from 'toastify-js'  
+import "toastify-js/src/toastify.css"
 import { auth } from "../firebase/firebase.config"
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth"
+import Checkout from "./Checkout"
+import CheckoutModal from "./CheckoutModal"
 
 const Login = () => {
 
     const [registrando, setRegistrando] = useState(false);
+    const [errores,setErrores] = useState('');
+
+    const [usuario, setUsuario] = useState(null);
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUsuario(true);
+        } 
+    });
 
     const [formData, setFormData] = useState({
         email: "",
         contraseña: ""
     })
 
-    const autentication = (e,currentData) => {
+    const autentication = (e, currentData) => {
         e.preventDefault();
         ingresarPorForm(currentData)
     }
@@ -21,14 +34,24 @@ const Login = () => {
             createUserWithEmailAndPassword(auth, currentData.email, currentData.contraseña)
                 .then((userCredential) => {
                     // Signed in 
-                    const user = userCredential.user;
+                    const userName = userCredential.user.email.split('@')[0];
                     // ...
-                    alert("cuenta creada")
+                    Toastify({
+                        text: `¡ Cuenta creada con éxito. Hola ${userName}`,
+                        duration: 4000,
+                        close: false,
+                        gravity: 'top',
+                        position: 'left',
+                        style: {
+                            background: `var(--clr-green)`,
+                            fontSize: "0.8rem",
+                            color: '#fff'
+                        }
+                    }).showToast()
                 })
                 .catch((error) => {
-                    const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert(errorMessage)
+                    setErrores(errorMessage)
                 });
         } else {
             try {
@@ -41,9 +64,8 @@ const Login = () => {
                         alert(user.email)
                     })
                     .catch((error) => {
-                        const errorCode = error.code;
-                        const errorMessage = error.message;
-                        alert(errorCode, errorMessage)
+                        const errorMsg = error.message;
+                        setErrores(errorMsg)
                     });
 
             } catch {
@@ -52,30 +74,24 @@ const Login = () => {
         }
     }
 
+
+    useEffect( () => {
+        const sto = setTimeout( () => {
+            setErrores('')
+        },2000)
+
+        return () => clearTimeout(sto)
+    },[errores])
+
     const handleDataForm = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
     return (
-        <main className='checkout-main'>
-            <section className='checkout'>
-                <form className='checkout-form' onSubmit={(e) => autentication(e,formData)}>
-                    <h1>{registrando ? "Registrate" : "Inicia Sesión"}</h1>
-                    <div className='container-inputs'>
-                        <div className='form-group'>
-                            <input type="text" name='email' id="email" placeholder=' ' value={formData.email} onChange={handleDataForm} />
-                            <label htmlFor="name">Email</label>
-                        </div>
-                        <div className='form-group'>
-                            <input type="password" name='contraseña' id="contraseña" placeholder=' ' value={formData.contraseña} onChange={handleDataForm} />
-                            <label htmlFor="email">Password</label>
-                        </div>
-                    </div>
-                    <div className="botones">
-                        <button type='submit'>{registrando ? "Registrate" : "Inicia sesion"}</button>
-                        <p>{registrando ? "Si ya tenes cuenta" : "Si no tenes cuenta"} <span onClick={() => setRegistrando(!registrando)}>{registrando ? "Inicia Sesión" : "Registrate"}</span></p>
-                    </div>
-                </form>
-            </section>
-        </main>
+        <>
+            {usuario ? <Checkout />
+                    : <CheckoutModal />}
+        </>
     )
 }
 

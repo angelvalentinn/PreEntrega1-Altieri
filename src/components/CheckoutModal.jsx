@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { CartContext } from "../context/CartContext"
-import { auth } from "firebase-admin";
 
 const CheckoutModal = ({ handleSubmit, handleDataForm, dataForm, cerrarSesion }) => {
     
