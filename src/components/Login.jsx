@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthState
 import { GoogleAuthProvider } from "firebase/auth";
 const provider = new GoogleAuthProvider();
 import { signInWithPopup } from "firebase/auth";
+import Checkout from "./Checkout"
 
 const Login = () => {
 
@@ -125,7 +126,7 @@ const Login = () => {
 
     return (
         <>
-            {usuario ? <CheckoutModal handleSubmit={handleSubmit} handleDataForm={handleDataForm} dataForm={dataForm} />
+            {usuario ? <Checkout />
                 : <main className='checkout-main'>
                 <section className='checkout'>
                     <form className='checkout-form' onSubmit={(e) => autentication(e, formData)}>
