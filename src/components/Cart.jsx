@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import emptyCart from '../assets/empty-cart.png'
 
 const Cart = () => {
     const { cart, counter, totalCart, vaciarCart, eliminarItem, setCantidad } =
@@ -22,6 +23,7 @@ const Cart = () => {
                         <Link to="/" className="cart-back-list">
                             <p>Lista de productos</p>
                         </Link>
+                        <img src={emptyCart} alt="" />
                         <h3>¡ Su carrito está vacío !</h3>
                     </div>
                 ) : (

@@ -6,6 +6,11 @@
   flex-direction: column;
   gap: 5rem;
 
+  .loader {
+    align-self: center;
+    justify-self: center;
+  }
+
   .cards {
     padding: 1rem 0;
     background-color: #ffffff;

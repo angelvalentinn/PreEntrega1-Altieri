@@ -6,14 +6,17 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/firebase.config";
+import Loading from './Loading';
 
 const ItemListContainer = () => {
 
     const [ productos, setProductos ] = useState([]);
     const { categoria } = useParams();
     const { setCantidad } = useContext(CartContext);
-
+    
     useEffect(() => {
+
+        setProductos([]);
 
         const productosDB = collection(db, "productos");
 
@@ -38,9 +41,11 @@ const ItemListContainer = () => {
         <>
             <Aside />
             <main className='items-container'>
-                <Card />
+                <Card /> 
+                {productos.length == 0 ? <Loading></Loading>
+                    : <ItemList productos={productos} />  
+                }
                 
-                <ItemList productos={productos} /> 
             </main>
         </>
     )
