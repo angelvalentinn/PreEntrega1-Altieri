@@ -97,11 +97,26 @@ export const CartProvider = ( {children} ) => {
         }).showToast()
     }
 
+    const handleSumarProductoEnCart = (item) => {
+        const newCart = [...cart]
+        const p = newCart.find(i => i.id == item.id);
+        if (p.cantidad < item.stock) p.cantidad = p.cantidad + 1
+        setCart(newCart);
+    };
+
+    const handleRestarProductoEnCart = (item) => {
+        const newCart = [...cart]
+        const p = newCart.find(i => i.id == item.id);
+        if (p.cantidad > 1) p.cantidad = p.cantidad - 1;
+        setCart(newCart);
+    };
+
     useEffect( () => localStorage.setItem("cart",JSON.stringify( cart )) , [cart] )
 
     return (
         <CartContext.Provider value={ {
             cart,
+            setCart,
             handleAgregar,
             counter,
             totalCart,
@@ -110,7 +125,9 @@ export const CartProvider = ( {children} ) => {
             handleSumar,
             handleRestar,
             cantidad,
-            setCantidad
+            setCantidad,
+            handleRestarProductoEnCart,
+            handleSumarProductoEnCart
             } }>
             {children}
         </CartContext.Provider>

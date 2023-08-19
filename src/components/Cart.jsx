@@ -4,16 +4,10 @@ import { CartContext } from "../context/CartContext";
 import emptyCart from '../assets/empty-cart.png'
 
 const Cart = () => {
-    const { cart, counter, totalCart, vaciarCart, eliminarItem, setCantidad } =
-        useContext(CartContext);
 
-    const handleSumarCart = (cantidad, stock) => {
-        cantidad < stock && setCantidad(cantidad + 1);
-    };
+    const { cart, counter, totalCart, vaciarCart, eliminarItem, setCart, handleSumarProductoEnCart, handleRestarProductoEnCart} = useContext(CartContext);
 
-    const handleRestarCart = (cantidad) => {
-        cantidad > 1 && setCantidad(cantidad - 1);
-    };
+
 
     return (
         <>
@@ -42,20 +36,23 @@ const Cart = () => {
                                             <img src={imgs[0]} alt={name} />
                                             <p className="item-name">{name}</p>
                                             <button onClick={() => eliminarItem(id)}>Eliminar</button>
-                                            <div className="item-buttons">
-                                                <button
-                                                    className="button-increment"
-                                                    onClick={() => handleSumarCart(cantidad, stock)}
-                                                >
-                                                    +
-                                                </button>
-                                                <span>{cantidad}</span>
-                                                <button
-                                                    className="button-decrement"
-                                                    onClick={() => handleRestarCart(cantidad)}
-                                                >
-                                                    -
-                                                </button>
+                                            <div className="cantidades">
+                                                <div className="item-buttons">
+                                                    <button
+                                                        className="button-increment"
+                                                        onClick={() => handleSumarProductoEnCart(item)}
+                                                    >
+                                                        <span>+</span>
+                                                    </button>
+                                                    <span>{cantidad}</span>
+                                                    <button
+                                                        className="button-decrement"
+                                                        onClick={() => handleRestarProductoEnCart(item)}
+                                                    >
+                                                        <span>-</span>
+                                                    </button>
+                                                </div>
+                                                <span className="disponibles">{stock} disponibles</span>
                                             </div>
                                             <p className="item-price">${price * cantidad}</p>
                                         </div>

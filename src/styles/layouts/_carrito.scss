@@ -122,20 +122,34 @@
           font-size: 0.7rem;
           cursor: pointer;
         }
-
-        .item-buttons {
+        .cantidades {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          gap: 1rem;
-          max-height: 40px;
-          padding: 0.4rem;
-          border: 1px solid var(--clr-wg);
-          .button-increment,
-          .button-decrement {
-            font-size: 1rem;
-            border: none;
-            font-weight: 300;
+          row-gap: 6px;
+          .item-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-height: 40px;
+            padding: 0.4rem;
+            border: 1px solid var(--clr-wg);
+            .button-increment,
+            .button-decrement {
+              font-size: 1rem;
+              border: none;
+              font-weight: 300;
+              span {
+                padding: 10px;
+              }
+            }
           }
+
+          .disponibles {
+            font-size: 0.66rem;
+            color: #757575;
+          }
+
         }
         .item-price {
           grid-row: 3;
@@ -262,24 +276,28 @@
             cursor: pointer;
           }
 
-          .item-buttons {
-            grid-column: 7 / 10;
+          .cantidades {
             justify-self: flex-start;
-            width: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            gap: 1rem;
-            padding: 0.5rem;
-            border-radius: 5px;
-            border: 1px solid var(--clr-q);
-            button {
-              font-size: 1rem;
-              border: none;
-              font-weight: 400;
-              background-color: inherit;
+            grid-column: 7 / 10;
+
+            .item-buttons {
+              width: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              gap: 1rem;
+              padding: 0.5rem;
+              border-radius: 5px;
+              border: 1px solid var(--clr-q);
+              button {
+                font-size: 1rem;
+                border: none;
+                font-weight: 400;
+                background-color: inherit;
+              }
             }
           }
+
           .item-price {
             grid-row: 1;
             grid-column: -1;
