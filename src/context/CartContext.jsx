@@ -12,6 +12,23 @@ export const CartProvider = ( {children} ) => {
     const [cantidad, setCantidad] = useState(1);
 
     const handleAgregar = (item,cantidad) =>  {
+        
+        if(item.stock < 1) {
+            Toastify({
+                text: '¡ No hay stock !',
+                duration: 1800,
+                close: true,
+                gravity: 'bottom',
+                position: 'center',
+                style: {
+                    background: `var(--clr-red)`,
+                    fontSize: "0.8rem",
+                    color: '#fff',
+                    marginTop: '80vh'
+                }
+            }).showToast()
+            return;
+        }
 
         const newCart = [...cart];
         const itemRepeat = newCart.find(itemCart => itemCart.id == item.id);

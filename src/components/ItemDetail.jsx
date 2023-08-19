@@ -67,7 +67,7 @@ const ItemDetail = ({ item }) => {
                     <p className="text">Stock disponible <span>({stock})</span></p>
                     <ItemCount cantidad={cantidad} handleRestar={() => handleRestar(cantidad)} handleSumar={() => handleSumar(cantidad,stock)} stock={stock}/>
                     <div className="buttons">
-                        <button onClick={ () => handleAgregar(item,cantidad) } style={{ opacity: condition ?'0.2' : '1' ,cursor: condition ? 'no-drop' : 'pointer'}} >Agregar al carrito</button>
+                        <button onClick={ () => handleAgregar(item,cantidad) } style={{ opacity: condition || stock < 1 ? '0.2' : '1' ,cursor: condition || stock < 1 ? 'no-drop' : 'pointer'}} >Agregar al carrito</button>
                         <button className="button-what" onClick={ () => askToWhatsapp(name,price) }><i className="bi bi-whatsapp"></i>WhatsApp</button>
                     </div>
                     

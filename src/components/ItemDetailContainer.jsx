@@ -9,7 +9,6 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams();
     const [item, setItem] = useState(null);
-    const [loading,setLoading] = useState(null);
 
     useEffect(() => {
         const docRef = doc(db,"productos",id)

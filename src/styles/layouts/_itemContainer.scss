@@ -1,4 +1,5 @@
 .items-container {
+  min-height: 80vh;
   margin-top: -4px;
   background-color: var(--clr-g);
   padding: 2rem 1.5rem;
@@ -73,6 +74,7 @@
       border-radius: 3px;
       cursor: pointer;
       overflow: hidden;
+      position: relative;
 
       img {
         border-radius: 10px 10px 0 0;
@@ -105,13 +107,35 @@
           min-height: 40px;
         }
       }
+
       &:hover {
         box-shadow: 0 25px 20px 0 rgba(0, 0, 0, 0.16),
           0 -1px 2px 0 rgba(0, 0, 0, 0.1);
         transition: 0.3s ease;
       }
+
+      .producto-sin-stock {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #827d7d7d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: auto;
+      }
+      .producto-con-stock {
+        position: initial;
+        background-color: #fff;
+      }
     }
   }
+
   
 }
 
