@@ -1,5 +1,5 @@
 import CartWidget from './CartWidget';
-import logo from "../assets/header-imgs/logo.png"
+import logo from "../assets/header-imgs/logo.jpg"
 import sale from "../assets/header-imgs/sale.jpg";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
