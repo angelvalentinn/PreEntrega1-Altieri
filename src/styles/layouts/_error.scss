@@ -1,0 +1,26 @@
+.error-main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 9rem;
+    }
+
+    h4{
+        font-size: 1.2rem;
+        padding-bottom: 2rem;
+    }
+    button{
+        font-size: 0.8rem;  
+        background-color: inherit;
+        color: #606060;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 1px solid #606060;
+        }
+    }
+}

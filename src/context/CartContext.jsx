@@ -100,14 +100,14 @@ export const CartProvider = ( {children} ) => {
     const handleSumarProductoEnCart = (item) => {
         const newCart = [...cart]
         const p = newCart.find(i => i.id == item.id);
-        if (p.cantidad < item.stock) p.cantidad = p.cantidad + 1
+        p.cantidad < item.stock && p.cantidad++
         setCart(newCart);
     };
 
     const handleRestarProductoEnCart = (item) => {
         const newCart = [...cart]
         const p = newCart.find(i => i.id == item.id);
-        if (p.cantidad > 1) p.cantidad = p.cantidad - 1;
+        p.cantidad > 1 && p.cantidad--
         setCart(newCart);
     };
 

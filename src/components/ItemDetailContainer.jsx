@@ -12,14 +12,13 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         const docRef = doc(db,"productos",id)
-        pedirItem(docRef)
+        pedirItem(docRef);
     }, []);
 
     const pedirItem = async docRef => {
         let snapshot = await getDoc(docRef);
-        setItem({...snapshot.data(), id:snapshot.id})
+        setItem( {...snapshot.data(), id:snapshot.id} );
     }
-
 
     return (
         <div style={{display: 'grid', placeItems: 'center', minHeight: '80vh', background: 'var(--clr-g)'}}>

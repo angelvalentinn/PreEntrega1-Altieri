@@ -14,7 +14,7 @@ const ItemDetail = ({ item }) => {
 
     const askToWhatsapp = (nameProduct,priceProduct) => {
         /* el método encodeURIComponent recibe un string y verifica que los carácteres sean aptos para enviarse por url
-           en caso contrario los cambia por carácteres válidos en url, ejemplo: el espacio se cambia por %20*/
+        en caso contrario los cambia por carácteres válidos en url, ejemplo: el espacio se cambia por %20*/
         const link = `https://wa.me/${celular}?text=${encodeURIComponent("Hola, estoy interesado en ")}
                       *${encodeURIComponent(nameProduct)}*,${encodeURIComponent(" que tiene un precio de ")}
                       *$${encodeURIComponent(priceProduct)}*.${encodeURIComponent(" ¡Muchas gracias!")}`;

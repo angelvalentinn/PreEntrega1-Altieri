@@ -1,5 +1,3 @@
-
-
 const ItemCount = ({cantidad,handleSumar,handleRestar,stock}) => {
   return (
     <div className="cantidad">

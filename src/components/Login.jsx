@@ -21,11 +21,7 @@ const Login = () => {
 
     const {register,handleSubmit} = useForm();
 
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            setUsuario(true);
-        }
-    });
+    onAuthStateChanged( auth, (user) => user && setUsuario(true) )
 
     const enviar = data => ingresarPorForm(data);
 
@@ -118,19 +114,12 @@ const Login = () => {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                // The email of the user's account used.
-                const email = error.customData.email;
                 alert(errorCode, errorMessage);
-                // The AuthCredential type that was used.
-                const credential = GoogleAuthProvider.credentialFromError(error);
-                // ...
             });
     };
 
     useEffect(() => {
-        const sto = setTimeout(() => {
-            setErrores("");
-        }, 2000);
+        const sto = setTimeout(() => setErrores("") ,  2000);
 
         return () => clearTimeout(sto);
     }, [errores]);

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { auth,db } from "../firebase/firebase.config";
-import { onAuthStateChanged,signOut } from "firebase/auth";
+import { auth, db } from "../firebase/firebase.config";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useForm } from 'react-hook-form'
 import Login from "./Login";
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore'
@@ -20,11 +20,7 @@ const Checkout = () => {
 
     const { cart, totalCart, vaciarCart } = useContext(CartContext);
 
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            setUsuario(true);
-        }
-    });
+    onAuthStateChanged(auth, (user) => user && setUsuario(true));
 
     const enviar = data => {
         const orden = {
@@ -52,24 +48,23 @@ const Checkout = () => {
 
             })
         cart.forEach((itemCart) => {
-            const itemCartRefDB = doc(db,'productos',itemCart.id);
-            updateStock(itemCartRefDB,itemCart)
+            const itemCartRefDB = doc(db, 'productos', itemCart.id);
+            updateStock(itemCartRefDB, itemCart)
         })
 
     }
 
-    const updateStock = async (itemCartRefDB,itemCart) => {
-        const itemCartDB =  await getDoc(itemCartRefDB);
+    const updateStock = async (itemCartRefDB, itemCart) => {
+        const itemCartDB = await getDoc(itemCartRefDB);
 
-        await updateDoc (itemCartRefDB, {
-            stock: Number(itemCartDB.data().stock) - Number(itemCart.cantidad) 
+        await updateDoc(itemCartRefDB, {
+            stock: Number(itemCartDB.data().stock) - Number(itemCart.cantidad)
         })
     }
 
     const cerrarSesion = () => {
-        setUsuario(null)
         signOut(auth).then(() => {
-
+            setUsuario(null)
         }).catch(() => {
             alert("sucedio un error al desloguearse")
         });
@@ -85,6 +80,9 @@ const Checkout = () => {
             cancelButtonColor: '#d33',
             cancelButtonText: 'No',
             confirmButtonText: 'Si',
+            customClass: {
+                title: 'title-swal-checkout'
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 cerrarSesion()
@@ -140,7 +138,6 @@ const Checkout = () => {
                     </form>
                 </section>
             </main>
-
         </>
     );
 };

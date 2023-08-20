@@ -7,8 +7,6 @@ const Cart = () => {
 
     const { cart, counter, totalCart, vaciarCart, eliminarItem, setCart, handleSumarProductoEnCart, handleRestarProductoEnCart} = useContext(CartContext);
 
-
-
     return (
         <>
             <div className="wrapper-carrito">
