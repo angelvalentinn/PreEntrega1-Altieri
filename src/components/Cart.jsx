@@ -42,7 +42,7 @@ const Cart = () => {
                                                     >
                                                         <span>+</span>
                                                     </button>
-                                                    <span>{cantidad}</span>
+                                                    <span className="cart-cantidad">{cantidad}</span>
                                                     <button
                                                         className="button-decrement"
                                                         onClick={() => handleRestarProductoEnCart(item)}

@@ -148,6 +148,7 @@ const Login = () => {
                                         name="email"
                                         id="email"
                                         placeholder=" "
+                                        value="pepe@gmail.com"
                                         {...register('email')}
                                     />
                                     <label htmlFor="name">Email</label>
@@ -157,6 +158,7 @@ const Login = () => {
                                         type={`${passwordVisible ? "text" : "password"}`}
                                         name="contraseña"
                                         id="contraseña"
+                                        value="123456"
                                         placeholder=" "
                                         {...register('contraseña')}
                                     />

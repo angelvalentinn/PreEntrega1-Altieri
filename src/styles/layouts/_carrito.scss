@@ -281,7 +281,7 @@
             grid-column: 7 / 10;
 
             .item-buttons {
-              width: 100px;
+              width: 120px;
               display: flex;
               align-items: center;
               justify-content: space-around;
@@ -295,13 +295,18 @@
                 font-weight: 400;
                 background-color: inherit;
               }
+              .cart-cantidad {
+                min-width: 25px;
+                text-align: center;
+              }
             }
           }
 
           .item-price {
             grid-row: 1;
             grid-column: -1;
-            font-weight: 500;
+            min-width: 150px;
+            text-align: end;
             font-size: 1.5rem;
           }
         }
