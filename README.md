@@ -25,6 +25,9 @@ Si bien este proyecto esta centrado para ordenadores, gracias a Sass logré el d
 - **Sweet Alert & Toastify** : Lo integré en mi aplicación para no hacer de forma nativa alertas y modales.
 - **Firebase**: En firebase use el servicio de auntenticación ya mencionado y la base de datos para alojar mis productos allí.
 
+# Gif mostrando el proyecto
+![gif](gif.gif)
+
 ## Conclusión: 
 Este proyecto demuestra mi habilidad para adaptarme a tecnologias como React, Sass y Firebase en una aplicación web integral y funcional. Estoy emocionado de compartir mi trabajo y estoy dispuesto a responder a cualquier pregunta que puedan tener sobre el mismo. Este proyecto refleja mi dedicación y ganas de seguir aprendiendo 😄.
 
