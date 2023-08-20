@@ -5,7 +5,7 @@ import emptyCart from '../assets/empty-cart.png'
 
 const Cart = () => {
 
-    const { cart, counter, totalCart, vaciarCart, eliminarItem, setCart, handleSumarProductoEnCart, handleRestarProductoEnCart} = useContext(CartContext);
+    const { cart, counter, totalCart, vaciarCart, eliminarItem, setCart, handleSumarProductoEnCart, handleRestarProductoEnCart } = useContext(CartContext);
 
     return (
         <>
@@ -37,18 +37,20 @@ const Cart = () => {
                                             <div className="cantidades">
                                                 <div className="item-buttons">
                                                     <button
-                                                        className="button-increment"
-                                                        onClick={() => handleSumarProductoEnCart(item)}
-                                                    >
-                                                        <span>+</span>
-                                                    </button>
-                                                    <span className="cart-cantidad">{cantidad}</span>
-                                                    <button
                                                         className="button-decrement"
                                                         onClick={() => handleRestarProductoEnCart(item)}
                                                     >
                                                         <span>-</span>
                                                     </button>
+
+                                                    <span className="cart-cantidad">{cantidad}</span>
+                                                    <button
+                                                        className="button-increment"
+                                                        onClick={() => handleSumarProductoEnCart(item)}
+                                                    >
+                                                        <span>+</span>
+                                                    </button>
+
                                                 </div>
                                                 <span className="disponibles">{stock} disponibles</span>
                                             </div>

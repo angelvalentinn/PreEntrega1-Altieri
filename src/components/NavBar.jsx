@@ -3,18 +3,12 @@ import logo from "../assets/header-imgs/logo.jpg"
 import sale from "../assets/header-imgs/sale.jpg";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase/firebase.config";
-
 
 const Navbar = () => {
 
     const [menu, setMenu] = useState(true);
-    const [usuario, setUsuario] = useState(null);
 
     const handleMenu = () => setMenu(!menu);
-
-    onAuthStateChanged(auth, (user) => user && setUsuario(user));
 
     return (
         <header className="header">
@@ -62,7 +56,7 @@ const Navbar = () => {
                 </nav>
 
                 <ul className="nav-secondary">
-                    <li className='li-user'><i className="bi bi-person user-icon"></i>{usuario ? usuario.email.split('@')[0] : <>User...</>}</li>
+                    <li className='li-user'><i className="bi bi-person user-icon"></i>User...</li>
                     <li>Compras</li>
                     <li>Favoritos</li>
                     <li className="li-bell"><i className="bi bi-bell bell"></i></li>
