@@ -26,10 +26,25 @@ Si bien este proyecto esta centrado para ordenadores, gracias a Sass logré el d
 - **Firebase**: En firebase use el servicio de auntenticación ya mencionado, la base de datos para alojar mis productos allí junto con el storage para las imagenes de los productos.
 - **react-hook-form**: Añadido para manejar mis formularios de una manera simple
 
-
-
 ## Conclusión: 
 Este proyecto demuestra mi habilidad para adaptarme a tecnologias como React, Sass y Firebase en una aplicación web integral y funcional. Estoy emocionado de compartir mi trabajo y estoy dispuesto a responder a cualquier pregunta que puedan tener sobre el mismo. Este proyecto refleja mi dedicación y ganas de seguir aprendiendo 😄.
+
+## Cargar proyecto localmente
+
+Para poder correr el proyecto en tu maquina local ejecuta los siguientes comandos en la terminal:
+
+### `npm clone <url del proyecto>`
+
+Este comando clonará el proyecto. Te recomiendo que 
+lo clones en el escritorio para poder visualizarlo.
+
+### `npm install`
+
+Este comando instalará todas las dependecias del proyecto.
+
+### `npm run dev`
+
+Este comando levantará el servidor local. Abra el servidor local y allí estará.
 
 # Contacto
 
