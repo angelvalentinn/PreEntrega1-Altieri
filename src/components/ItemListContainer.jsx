@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/firebase.config";
-import Loading from './Loading';
+import Loading from '../helpers/Loading';
 
 const ItemListContainer = () => {
 
