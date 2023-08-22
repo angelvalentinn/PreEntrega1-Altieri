@@ -22,7 +22,7 @@ const Navbar = () => {
                     <i className="bi bi-search lupa"></i>
                 </div>
 
-                <img srcSet={sale} alt="" className="msg-sale" />
+                <img srcSet={sale} alt="Mensaje de oferta" className="msg-sale" />
 
                 <i className="bi bi-list bars" onClick={handleMenu}></i>
 

@@ -15,7 +15,7 @@ const Cart = () => {
                         <Link to="/" className="cart-back-list">
                             <p>Lista de productos</p>
                         </Link>
-                        <img src={emptyCart} alt="" />
+                        <img src={emptyCart} alt="Imagén referenciado a un carrito vacío" />
                         <h3>¡ Su carrito está vacío !</h3>
                     </div>
                 ) : (
