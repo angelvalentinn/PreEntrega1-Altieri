@@ -16,7 +16,7 @@ Si bien este proyecto esta centrado para ordenadores, gracias a Sass logré el d
 # Construido con: 
 * <img src="https://img.shields.io/badge/React-087ea4?style=for-the-badge&logo=React&logoColor=white">
 * <img src="https://img.shields.io/badge/Vite-8f6efe?style=for-the-badge&logo=Vite&logoColor=white">
-* <img src="https://img.shields.io/badge/Sass-cf649a?&style=for-the-badge&logo=Sass3&logoColor=white">
+* <img src="https://img.shields.io/badge/Sass-cf649a?&style=for-the-badge&logo=Sass&logoColor=white">
 * <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" width= 100px>
 >
 
@@ -24,6 +24,7 @@ Si bien este proyecto esta centrado para ordenadores, gracias a Sass logré el d
 - **react-router-dom** : Lo utilicé para gestionar la navegación en mi aplicación. Logrando un enrutamiento declarativo y dinámico que permite a los usuarios moverse entre diferentes vistas sin tener que recargar la página. 
 - **Sweet Alert & Toastify** : Lo integré en mi aplicación para no hacer de forma nativa alertas y modales.
 - **Firebase**: En firebase use el servicio de auntenticación ya mencionado, la base de datos para alojar mis productos allí junto con el storage para las imagenes de los productos.
+- **react-hook-form**: Añadido para manejar mis formularios de una manera simple
 
 
 
