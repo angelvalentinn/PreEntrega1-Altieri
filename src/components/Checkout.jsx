@@ -137,6 +137,22 @@ const Checkout = () => {
                         </div>
                     </form>
                 </section>
+                <section className="cart-checkout">
+                    <h5>Tus productos</h5>
+                    <div className="cart-checkout-products">
+                        {
+                            cart.map(item => {
+                                const { imgs, cantidad, name } = item;
+                                return (
+                                    <div key={item.name}>
+                                        <img srcSet={imgs[0]} alt={name} />
+                                        <p>{cantidad}</p>
+                                    </div>)
+                            })
+                        }
+                    </div>
+                    <p className="total">Total: <span>{totalCart().toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</span></p>
+                </section>
             </main>
         </>
     );
