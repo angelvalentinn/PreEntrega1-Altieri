@@ -2,6 +2,8 @@
 
 *El proyecto está basado en un sitio ya existente. Es una plataforma de comercio electrónico diseñada para ofrecer una experiencia de compra  en línea. El enfoque principal del sitio es proporcionar una  gama de productos en categorías. Con una UI intuitiva y atráctiva.*
 
+![gif mostrando proyecto](gif-proyect.gif)
+
 ## Características
 
 - **Autenticación Segura**:
