@@ -44,6 +44,9 @@ lo clones en el escritorio para poder visualizarlo.
 
 Este comando instalará todas las dependecias del proyecto.
 
+### `cd <nombre-del-proyecto>`
+Aca cambiarás de directorio y entrarás al proyecto
+
 ### `npm run dev`
 
 Este comando levantará el servidor local. Abra el servidor local y allí estará.
